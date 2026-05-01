@@ -3,7 +3,7 @@
 \usepackage{sbc-template}
 \usepackage{graphicx,url}
 \usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
+\usepackage[english]{babel}
 %\usepackage[latin1]{inputenc}  
 
      
@@ -27,7 +27,7 @@
   A literature review was conducted to understand the embedded systems field applied to data collection-aided instrumentation for the Physics teaching lab. 
   Databases searched include IEEE Xplore and the European Journal of Physics, both last searched 2026, April 26.
   Exclusion criteria include little to no applicability in the physics teaching lab, and little to no instrumentation or embedded systems relevance.
-  Risk of bias was assessed using methodological clarity, reproducibility, and reported validation, and results were synthesized with LLMs following manual human verification.
+  Risk of bias was assessed using methodological clarity and reproducibility, and results were synthesized with LLMs following manual human verification.
   51 papers were included.
   Findings indicate a gap between high-cost, high-precision instrumentation and low-cost, low-accuracy solutions, with few works addressing both affordability and measurement reliability thanks to the usage of custom experimentation setups with cheap embedded devices such as microcontrollers and sensors, and IoT-related connectivity.
   The evidence is limited by the time constraints to perform the review, which resulted in a low sample size of papers.
@@ -50,11 +50,11 @@ Questions of the review include:
 
 \section{Methods}
 
-The literature review process was aided by the Parsifal web research tool, from paper importing, screening and data extraction recording. In all steps but data extraction of accepted papers, no AI tools were used, to minimize risk of bias and make the author accountable for it.
+The literature review process was aided by the Parsifal web research tool \cite{parsifal}, from paper importing, screening and data extraction recording. In all steps but data extraction of accepted papers, no AI tools were used, to minimize risk of bias and make the author accountable for it.
 
-It was decided diverse databases that could provide papers with different angles to the research question would be the ideal choice for a reliable review. IEEE Xplore was the first database chosen, given its reputation for good engineering papers that could satisfy the aim of finding texts with satisfactory details in experimental architectures. The European Journal of Physics, accessed via the IOP Science platform, was the second database chosen, for a physics and education-focused angle of the problem, thanks to its reputation in these fields. Last search date was April 26, 2026.
+It was decided diverse databases that could provide papers with different angles to the research question would be the ideal choice for a reliable review. IEEE Xplore \cite{ieee} was the first database chosen, given its reputation for good engineering papers that could satisfy the aim of finding texts with satisfactory details in experimental architectures. The European Journal of Physics, accessed via the IOP Science platform \cite{iop}, was the second database chosen, for a physics and education-focused angle of the problem, thanks to its reputation in these fields. Last search date was April 26, 2026.
 
-The search strategy was tuned given time constraints, aiming to narrow down the large scope of the field of physics education instrumentation by keywords more closely related to the proposed intervention carefully to avoid overly biased searched results. This was done by fitting the research questions in the PICOC framework, which generate the search string via the Parsifal tool. The approach was tuning by the keywords until the generated search string returned a number of papers manageable for full text review, assuming most papers would pass the initial screening by title and abstract, as it is acceptable to happen in a common PRISMA-compliant review approach of seeking high recall. A search string that returned 174 papers in total accross both databases was deemed acceptable for providing a manageable volume of papers for review.
+The search strategy was tuned given time constraints, aiming to narrow down the large scope of the field of physics education instrumentation by keywords more closely related to the proposed intervention carefully to avoid overly biased searched results. This was done by fitting the research questions in the PICOC framework \cite{wohlin2012experimentation}, which generate the search string via the Parsifal tool. The approach was tuning by the keywords until the generated search string returned a number of papers manageable for full text review, assuming most papers would pass the initial screening by title and abstract, as it is acceptable to happen in the rigorous review philosophy of seeking high recall \cite{cochrane_handbook_2024}. A search string that returned 174 papers in total accross both databases was deemed acceptable for providing a manageable volume of papers for a robust review.
 
 The final search string was:
 
@@ -90,7 +90,7 @@ Quality assessment by full text was not permissive, though. Said step had the fo
 
 Each full paper was assessed given this criteria with Yes/Partially/No values, after it was decided selected studies should have a score cutoff of 3.5. Careful reading of full text was needed to assess with minimal bias.
 
-Lastly, accepted papers were uploaded in a LLM app for extraction of data fields, followed by quick human verification.
+Lastly, accepted papers were uploaded in a LLM app for extraction of data fields, followed by human verification.
 
 \section{General Information}
 
@@ -187,16 +187,6 @@ internet, etc.). The image resolution on paper should be about 600 dpi for
 black-and-white images, and 150-300 dpi for grayscale images.  Do not include
 images with excessive resolution, as they may take hours to print, without any
 visible difference in the result. 
-
-\section{References}
-
-Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{knuth:84},
-\cite{boulic:91}, and \cite{smith:99}.
-
-The references must be listed using 12 point font size, with 6 points of space
-before each reference. The first line of each reference should not be
-indented, while the subsequent should be indented by 0.5 cm.
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}
