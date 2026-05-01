@@ -9,7 +9,7 @@
      
 \sloppy
 
-\title{A systematic review on the embedded systems field applied to data collection-aided instrumentation for the Physics teaching lab}
+\title{A literature review on the embedded systems field applied to data collection-aided instrumentation for the Physics teaching lab}
 
 \author{Victor Hugo Bitencourt\inst{1}}
 
@@ -24,17 +24,74 @@
 \maketitle
 
 \begin{abstract}
-  A systematic review was conducted to understand the embedded systems field applied to data collection-aided instrumentation for the Physics teaching lab. 
-  Databases searched include IEEE Xplore and the European Journal of Physics, the latter via the IOPscience platform, both last searched 2026, April 26.
-  Inclusion criteria include applicability in the physics teaching lab, data acquisition process, and instrumentation or embedded systems relevance.
-  Risk of bias was assessed using methodological clarity, reproducibility, and reported validation, and results were synthesized with LLMs following manual human verification. 
-  N results were included.
+  A literature review was conducted to understand the embedded systems field applied to data collection-aided instrumentation for the Physics teaching lab. 
+  Databases searched include IEEE Xplore and the European Journal of Physics, both last searched 2026, April 26.
+  Exclusion criteria include little to no applicability in the physics teaching lab, and little to no instrumentation or embedded systems relevance.
+  Risk of bias was assessed using methodological clarity, reproducibility, and reported validation, and results were synthesized with LLMs following manual human verification.
+  51 papers were included.
   Findings indicate a gap between high-cost, high-precision instrumentation and low-cost, low-accuracy solutions, with few works addressing both affordability and measurement reliability thanks to the usage of custom experimentation setups with cheap embedded devices such as microcontrollers and sensors, and IoT-related connectivity.
-  The evidence is limited only by heterogeneity in study designs.
-  These findings suggest that developing low-cost yet accurate instrumentation is both viable and needed in this domain. 
-  This study received no external funding and was not registered.
+  The evidence is limited by the time constraints to perform the review, which resulted in a low sample size of papers.
+  The findings suggest that developing low-cost yet accurate instrumentations is needed in this domain, and wireless instrumentation is a possible high impact intervention in real physics teaching labs.
 \end{abstract}
-     
+
+\section{Introduction}
+
+This review was conducted with the aim to build knowledge about the proposed field.
+Its unique value is summarizing the current state of the field in a trustable way through methodological rigor, bringing data to support a relevant intervention.
+The starting point was the following intervention: ``a low-cost architecture using wireless connection to manage physics teaching experiments with a computer''.
+Questions of the review include:
+
+\begin{itemize}
+  \item How do embedded systems aid data collection for educational physics experiments?
+  \item How do web servers aid data telemetry from educational physics experiments?
+  \item How does technology aid analysis of results from educational physics experiments?
+  \item How does technology enhance learning in educational physics experiment laboratories?
+\end{itemize}
+
+\section{Methods}
+
+The literature review process was aided by the Parsifal web research tool, from paper importing, screening and data extraction recording. In all steps but data extraction of accepted papers, no AI tools were used, to minimize risk of bias and make the author accountable for it.
+
+It was decided diverse databases that could provide papers with different angles to the research question would be the ideal choice for a reliable review. IEEE Xplore was the first database chosen, given its reputation for good engineering papers that could satisfy the aim of finding texts with satisfactory details in experimental architectures. The European Journal of Physics, accessed via the IOP Science platform, was the second database chosen, for a physics and education-focused angle of the problem, thanks to its reputation in these fields. Last search date was April 26, 2026.
+
+The search strategy was tuned given time constraints, aiming to narrow down the large scope of the field of physics education instrumentation by keywords more closely related to the proposed intervention carefully to avoid overly biased searched results. This was done by fitting the research questions in the PICOC framework, which generate the search string via the Parsifal tool. The approach was tuning by the keywords until the generated search string returned a number of papers manageable for full text review, assuming most papers would pass the initial screening by title and abstract, as it is acceptable to happen in a common PRISMA-compliant review approach of seeking high recall. A search string that returned 174 papers in total accross both databases was deemed acceptable for providing a manageable volume of papers for review.
+
+The final search string was:
+
+\begin{verbatim}
+("educational laboratory" OR "physics education" 
+OR "teaching laboratory") AND 
+("Arduino" OR "data acquisition" OR "embedded system" 
+OR "microcontroller") AND ("education" OR "learning" 
+OR "low cost" OR "low-cost" OR "teaching")
+\end{verbatim}
+
+Other than search string tuning, selection was aided by the additional filter of papers after 2008. This decision was motivated by the fact that the Arduino Nano was released that year. Such microcontroller is currently the oldest widely sold board in the market created by the Arduino brand, which in turn is widely recognized as the most popular microcontroller brand.
+
+Initial selection by title and abstract had the following exclusion criteria of each paper:
+
+\begin{itemize}
+  \item Does it not at least suggest experimental infrastructure?
+  \item Does it not at least suggest a teaching lab?
+  \item Is the experiment a virtual simulation instead of real experiment?
+  \item Does it not at least suggest physics experiments?
+\end{itemize}
+
+The choice for permissive criteria in initial selection was taken to prioritize high recall.
+Quality assessment by full text was not permissive, though. Said step had the following criteria for each paper:
+
+\begin{itemize}
+  \item Is it relevant to experimental instrumentation or embedded systems?
+  \item Is there a clear contribution to experimental teaching methodology?
+  \item Is there a physics teaching laboratory context?
+  \item Is there an experimental activity involving students?
+  \item Is there a data acquisition or measurement process?
+\end{itemize}
+
+Each full paper was assessed given this criteria with Yes/Partially/No values, after it was decided selected studies should have a score cutoff of 3.5. Careful reading of full text was needed to assess with minimal bias.
+
+Lastly, accepted papers were uploaded in a LLM app for extraction of data fields, followed by quick human verification.
+
 \section{General Information}
 
 All full papers and posters (short papers) submitted to some SBC conference,
