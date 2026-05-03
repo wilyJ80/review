@@ -26,6 +26,14 @@ Higgins, J., Thomas, J., Chandler, J., Cumpston, M., Li, T., and Page, M.~e.
 \newblock \url{https://parsifal.co/}.
 \newblock Accessed: 2026-05-01.
 
+\bibitem[Pedregosa et~al. 2026]{sklearn}
+Pedregosa, F. et~al. (2026).
+\newblock {LabelEncoder — scikit-learn 1.8.0 documentation}.
+\newblock
+  \url{https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+  }.
+\newblock Accessed: 2026-05-03.
+
 \bibitem[Wohlin et~al. 2012]{wohlin2012experimentation}
 Wohlin, C., Runeson, P., H{\"o}st, M., Ohlsson, M.~C., Regnell, B., and
   Wessl{\'e}n, A. (2012).

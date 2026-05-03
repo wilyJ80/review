@@ -4,6 +4,8 @@
 \usepackage{graphicx,url}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{float}
+\usepackage{placeins}
 %\usepackage[latin1]{inputenc}  
 
      
@@ -96,14 +98,33 @@ Lastly, accepted papers were uploaded in a LLM app for extraction of data fields
 
 From the two databases selected, 174 studies were found. 19 were excluded by paper and abstract, leaving 155 for quality assessment, which involved reading of full text. At this step, 97 studies were rejected and 26 were not found because due to no open access. In the end, 51 studies were included in the review.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=.9\textwidth]{prismagray.png}
-\caption{Paper screening funnel strategy}
+\caption{Paper screening strategy}
 \label{fig:exampleFig1}
 \end{figure}
 
 Some studies might appear to meet the inclusion criteria, but were excluded because of lack of scoring in the chosen quality assessment approach.
+
+During data extraction of accepted texts, studies were distinguished by three approaches: physics precision-first (precise instrumentation but high cost, or not friendly for individuals not from physics backgrounds), education learning-first (friendly for the genereal public but with low focus on precise instrumentation) and embedded/hybrid (with microcontrollers having the most representation). 
+
+Quantitative patterns of studies were extracted via Python code.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{docmatrixgray.png}
+\caption{Paper screening strategy}
+\label{fig:exampleFig10}
+\end{figure}
+
+\section{Discussion}
+
+Unlike initially thought, the embedded/hybrid approach wasn't as uncommon as expected, although still not as common as the physics precision-first approach. The results of Dominant Technological Approaches indicate a good representation of the need of best precision possible in such studies, given their respective constraints and methodological focus.
+
+The Categorical Association Matrix of the data of accepted texts, created with a label encoder \cite{sklearn}, indicate a strong correlation of Data Acquisition Method and Hardware Cost Category, matching assumptions of the data acquisition method heavily influencing the total cost of experimental setup. There was a high correlation with data transfer method and technological approach too, matching initial assumptions of embedded setups dominating the representation of advanced approaches of data transfer, such as wireless connectivity.
+
+The findings indicate a gap in the studies related with cheaper experimental setups with precise data logging, and confirm the proposed intervention of the usage of embedded systems as a high impact approach for making experimental data transfers cheap, scalable and easy to use.
 
 \section{General Information}
 
