@@ -34,3 +34,17 @@
 - Mostrar string de busca.
 - Insights a partir de 60% dos artigos apreciados, o que prova a eficiência da minha string de busca, criada com PICOC e refinada de forma a ter quantidade de artigos a apreciar humanamente possível, assumindo que o high recall iria descartar uma quantidade mínima de artigos. A revisao sistematica alcançou sucesso total, que consiste em compreender o estado da arte de forma plena, dados os vieses e limitacoes de escopo no meio do processo.
 - Regra de Pareto se aplica nos meus resultados? Aceitos/rejeitados?
+
+# Final
+
+- 174 total (quality)
+
+- 19 total (rejected selection)
+
+- 155 total (accepted selection)
+
+- 41 total (accepted quality)
+
+- 114 total (not accepted quality)
+
+- 88 rejected (quality)

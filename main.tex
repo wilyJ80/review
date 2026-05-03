@@ -6,6 +6,9 @@
 \usepackage[english]{babel}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{xltabular}
 %\usepackage[latin1]{inputenc}  
 
      
@@ -30,8 +33,8 @@
   Databases searched include IEEE Xplore and the European Journal of Physics, both last searched 2026, April 26.
   Exclusion criteria include little to no applicability in the physics teaching lab, and little to no instrumentation or embedded systems relevance.
   Risk of bias was assessed using methodological clarity and reproducibility, and results were synthesized with LLMs following manual human verification.
-  51 papers were included.
-  Findings indicate a gap between high-cost, high-precision instrumentation and low-cost, low-accuracy solutions, with few works addressing both affordability and measurement reliability thanks to the usage of custom experimentation setups with cheap embedded devices such as microcontrollers and sensors, and IoT-related connectivity.
+  41 papers were included.
+  Findings indicate a clear need of balancing experimental setup cost with measurement accuracy and quality instrumentation.
   The evidence is limited by the time constraints to perform the review, which resulted in a low sample size of papers.
   The findings suggest that developing low-cost yet accurate instrumentations is needed in this domain, and wireless instrumentation is a possible high impact intervention in real physics teaching labs.
 \end{abstract}
@@ -96,20 +99,82 @@ Lastly, accepted papers were uploaded in a LLM app for extraction of data fields
 
 \section{Results}
 
-From the two databases selected, 174 studies were found. 19 were excluded by paper and abstract, leaving 155 for quality assessment, which involved reading of full text. At this step, 97 studies were rejected and 26 were not found because due to no open access. In the end, 51 studies were included in the review.
+From the two databases selected, 174 studies were found. 19 were excluded by title and abstract, leaving 155 for quality assessment, which involved reading of full text. At this step, 88 studies were rejected and 26 were not found because due to no open access. In the end, 41 studies were included in the review.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.9\textwidth]{prismagray.png}
+\includegraphics[width=.9\textwidth]{prismadiagfinalgray.png}
 \caption{Paper screening strategy}
 \label{fig:exampleFig1}
 \end{figure}
 
-Some studies might appear to meet the inclusion criteria, but were excluded because of lack of scoring in the chosen quality assessment approach.
+Some studies might appear to meet the inclusion criteria, but were excluded because of lack of scoring in the chosen quality assessment approach. Some studies included might give the opposite impression, but were included for the same reasons.
 
 During data extraction of accepted texts, studies were distinguished by three approaches: physics precision-first (precise instrumentation but high cost, or not friendly for individuals not from physics backgrounds), education learning-first (friendly for the genereal public but with low focus on precise instrumentation) and embedded/hybrid (with microcontrollers having the most representation). 
 
-Quantitative patterns of studies were extracted via Python code.
+The following table lists all accepted texts.
+
+\begin{xltabular}{\textwidth}{|X|l|l|l|c|l|X|}
+    \caption{Data Extraction Results of Included Literature} \label{tab:extraction_results} \\
+    \hline
+    \textbf{Article} & \textbf{Acq.} & \textbf{Cost} & \textbf{Trans.} & \textbf{Lrn.} & \textbf{Appr.} & \textbf{Key Contribution} \\ \hline
+    \endfirsthead
+
+    \hline
+    \multicolumn{7}{|c|}{Continuation of Table \ref{tab:extraction_results}} \\
+    \hline
+    \textbf{Article} & \textbf{Acq.} & \textbf{Cost} & \textbf{Trans.} & \textbf{Lrn.} & \textbf{Appr.} & \textbf{Key Contribution} \\ \hline
+    \endhead
+
+    \hline
+    \multicolumn{7}{|r|}{Continued on next page...} \\
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+        
+    OHMLY: Development and Application of an Arduino-Based Educational Kit... & microcont. & very low & Onboard & True & educ. & Development of Arduino kit for Ohm's Law. \\ \hline
+    Construction of an Educational Device for Real Time Data Acquisition... & microcont. & very low & Physical & False & phys. & 0.72\% error rate in calorimetry. \\ \hline
+    MICA: an innovative approach to remote data acquisition & microcont. & very low & Wireless & False & phys. & Modular wireless 25mm cube measurement system. \\ \hline
+    Design of a Network Virtual Laboratory System for Digital Signal Processing & microcont. & high & Wireless & True & phys. & LabVIEW-based network virtual laboratory. \\ \hline
+    Teaching Physical Sciences Using Arduino Physics Lab at the Univ. Del Cauca & microcont. & mid & Wireless & True & phys. & Adaption of 5 self-guided laboratory guides. \\ \hline
+    Integrating Microcontrollers and Data Analysis: A STEM Approach to Free Fall & microcont. & very low & Physical & True & phys. & Modified PLX-DAQ Excel interface. \\ \hline
+    Design of measurement and data acquisition laboratory for instrumentation & microcont. & very low & Other & True & educ. & Open-source meteorological data logging. \\ \hline
+    3 Distributed Home Labs at the Time of the Covid & smartphone & very low & Onboard & True & educ. & Distributed home laboratory framework. \\ \hline
+    Intelligent System for Adaptive Resource Management in a Hybrid Lab & microcont. & very low & Wireless & True & hybrid & ESP32-based prototype for lab scheduling. \\ \hline
+    A Wireless robotic educational platform approach & Other & very low & Wireless & False & educ. & Modular wireless robotic platform. \\ \hline
+    A One-Credit Hands-On Introductory Course in ECE & DAQ Card & mid & Physical & True & phys. & Modular approach for ECE freshmen. \\ \hline
+    A system based on fuzzy logic to control humidity and temperature & microcont. & mid & Physical & False & hybrid & Fuzzy logic system for fungus cultivation. \\ \hline
+    Exploiting AR and IoT for Gamma Ray Experiments in Educational Field & microcont. & high & Wireless & False & hybrid & Remote lab framework using AR and IoT. \\ \hline
+    A computer-controlled Arduino-based lab system for photovoltaic cells & microcont. & mid & Physical & False & hybrid & SolarInsight apparatus using ROOT software. \\ \hline
+    Design of a simple free-fall apparatus for accurate g measurement & Custom & very low & Physical & True & hybrid & Impact sensor ($<0.1$ ms resolution). \\ \hline
+    Teaching labs for blind students: measuring thermal expansion & microcont. & very low & Other & True & educ. & Audible-feedback thermal expansion apparatus. \\ \hline
+    Ultrasound scanner—Teaching tool & DAQ Card & mid & Physical & True & phys. & Portable ultrasound toolkit. \\ \hline
+    Study of coefficient of discharge through orifices & microcont. & very low & Physical & False & hybrid & Sensor array for water level recording. \\ \hline
+    Organic solar cells and physics education & Other & very low & Manual & False & educ. & DIY dye-sensitized solar cell project. \\ \hline
+    A laboratory activity for teaching natural radioactivity & Other & high & Manual & True & phys. & Geiger-Müller counting with spectrometry. \\ \hline
+    Rapid feedback control of optical tweezers with a budget microcontroller & microcont. & very low & Physical & False & phys. & Register-level optimized Arduino Due. \\ \hline
+    Learning physics while monitoring vibrations of the Earth (Raspberry Pi) & microcont. & high & Wireless & True & phys. & Raspberry Shake seismograph implementation. \\ \hline
+    Automated thermal conductivity apparatus using hot-wire method & DAQ Card & high & Physical & False & phys. & Automated high-precision heat transfer lab. \\ \hline
+    A laboratory over the internet for a course on data analysis & microcont. & very low & Wireless & True & hybrid & Web-based lab for nuclear counting statistics. \\ \hline
+    An inexpensive way to introduce students to gamma spectroscopy & microcont. & mid & Physical & True & hybrid & Hardware-simulated NIM components. \\ \hline
+    Undergraduate lab: build and characterize a thermionic triode & DAQ Card & high & Physical & False & phys. & Vacuum chamber triode construction. \\ \hline
+    Computing g within the World Pendulum Alliance & Custom & high & Wireless & True & hybrid & Global network for geophysical gravity study. \\ \hline
+    Calibration experiment for light dependent resistors using Malus law & Other & very low & Manual & True & educ. & LDR calibration via Malus' Law. \\ \hline
+    Graduate lab: photon-counting detector using MKIDs & DAQ Card & high & Physical & True & phys. & MKID detector from cryogenics to analysis. \\ \hline
+    Acoustics in the daily life of bats & Other & very low & Physical & True & hybrid & Context-based curriculum using sensors. \\ \hline
+    A remote laboratory for optical levitation of charged droplets & DAQ Card & high & Physical & True & phys. & Remote access for droplet levitation. \\ \hline
+    Real-time demonstration of chaos in a real double pendulum & microcont. & mid & Wireless & True & phys. & Real-time accelerometer-based chaos analysis. \\ \hline
+    A parametric oscillator for classroom demonstration & microcont. & mid & Physical & True & hybrid & Demonstration of parametric resonance. \\ \hline
+    When geometry is irrelevant for heat diffusion & DAQ Card & high & Physical & False & hybrid & Geometric independence in thermal limits. \\ \hline
+    Determining the critical point of SF6 using light scattering & microcont. & high & Physical & False & phys. & Control system for SF6 critical exponents. \\ \hline
+    Optimizing acceleration measurements using a single photogate & DAQ Card & high & Physical & False & phys. & Single photogate method ($6\times$ reduction in error). \\ \hline
+\end{xltabular}
+
+\section{Discussion}
+
+By the time over a half of studies were read during full text quality assessment, knowledge building met diminishing returns: the more texts were read, the less novel information was found and the trend of the three major types of experimental setups found itself a clear pattern. For this reason, this literature review should be considered a success in building a clear outlook of the knowledge in the field, and the sample size large enough for a trustable assessment. Patterns of studies were extracted via Python code:
 
 \begin{figure}[H]
 \centering
@@ -118,109 +183,12 @@ Quantitative patterns of studies were extracted via Python code.
 \label{fig:exampleFig10}
 \end{figure}
 
-\section{Discussion}
 
 Unlike initially thought, the embedded/hybrid approach wasn't as uncommon as expected, although still not as common as the physics precision-first approach. The results of Dominant Technological Approaches indicate a good representation of the need of best precision possible in such studies, given their respective constraints and methodological focus.
 
-The Categorical Association Matrix of the data of accepted texts, created with a label encoder \cite{sklearn}, indicate a strong correlation of Data Acquisition Method and Hardware Cost Category, matching assumptions of the data acquisition method heavily influencing the total cost of experimental setup. There was a high correlation with data transfer method and technological approach too, matching initial assumptions of embedded setups dominating the representation of advanced approaches of data transfer, such as wireless connectivity.
+The Categorical Association Matrix of the data of accepted texts, created with a label encoder \cite{sklearn}, indicate a strong correlation of Data Acquisition Method and Hardware Cost Category, matching assumptions of the data acquisition method heavily influencing the total cost of experimental setup (it is very clear to understand how a commercial Data Acquisition Card, like those from National Instruments, might dramatically increase the price of an otherwise affordable experimental setup, for example). There was a high correlation with data transfer method and technological approach too, matching initial assumptions of embedded setups dominating the representation of advanced approaches of data transfer, such as wireless connectivity.
 
-The findings indicate a gap in the studies related with cheaper experimental setups with precise data logging, and confirm the proposed intervention of the usage of embedded systems as a high impact approach for making experimental data transfers cheap, scalable and easy to use.
-
-\section{General Information}
-
-All full papers and posters (short papers) submitted to some SBC conference,
-including any supporting documents, should be written in English or in
-Portuguese. The format paper should be A4 with single column, 3.5 cm for upper
-margin, 2.5 cm for bottom margin and 3.0 cm for lateral margins, without
-headers or footers. The main font must be Times, 12 point nominal size, with 6
-points of space before each paragraph. Page numbers must be suppressed.
-
-Full papers must respect the page limits defined by the conference.
-Conferences that publish just abstracts ask for \textbf{one}-page texts.
-
-\section{First Page} \label{sec:firstpage}
-
-The first page must display the paper title, the name and address of the
-authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
-required only for papers written in Portuguese). The title must be centered
-over the whole page, in 16 point boldface font and with 12 points of space
-before itself. Author names must be centered in 12 point font, bold, all of
-them disposed in the same line, separated by commas and with 12 points of
-space after the title. Addresses must be centered in 12 point font, also with
-12 points of space after the authors' names. E-mail addresses should be
-written using font Courier New, 10 point nominal size, with 6 points of space
-before and 6 points of space after.
-
-The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
-indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
-should be written in boldface and must precede the text.
-
-\section{CD-ROMs and Printed Proceedings}
-
-In some conferences, the papers are published on CD-ROM while only the
-abstract is published in the printed Proceedings. In this case, authors are
-invited to prepare two final versions of the paper. One, complete, to be
-published on the CD and the other, containing only the first page, with
-abstract and ``resumo'' (for papers in Portuguese).
-
-\section{Sections and Paragraphs}
-
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
-
-\subsection{Subsections}
-
-The subsection titles must be in boldface, 12pt, flush left.
-
-\section{Figures and Captions}\label{sec:figs}
-
-
-Figure and table captions should be centered if less than one line
-(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
-both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
-be Helvetica, 10 point, boldface, with 6 points of space before and after each
-caption.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{A typical figure}
-\label{fig:exampleFig1}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.3\textwidth]{fig2.jpg}
-\caption{This figure is an example of a figure caption taking more than one
-  line and justified considering margins mentioned in Section~\ref{sec:figs}.}
-\label{fig:exampleFig2}
-\end{figure}
-
-In tables, try to avoid the use of colored or shaded backgrounds, and avoid
-thick, doubled, or unnecessary framing lines. When reporting empirical data,
-do not use more decimal digits than warranted by their precision and
-reproducibility. Table caption must be placed before the table (see Table 1)
-and the font used must also be Helvetica, 10 point, boldface, with 6 points of
-space before and after each caption.
-
-\begin{table}[ht]
-\centering
-\caption{Variables to be considered on the evaluation of interaction
-  techniques}
-\label{tab:exTable1}
-\includegraphics[width=.7\textwidth]{table.jpg}
-\end{table}
-
-\section{Images}
-
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result. 
+The findings indicate a gap in the studies related with cheaper experimental setups with precise data logging, and confirm the proposed intervention of the usage of embedded systems as a high impact approach for making experimental setups cheap, scalable and easy to use, with flexibility in data transfer approaches. It is a desirable intervention to use microcontrollers with their own data acquisition and transfer modules, and to centralize the collected data in, for example, a server that could provide easy access to it afterwards.
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}
