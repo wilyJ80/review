@@ -1,10 +1,115 @@
 \begin{thebibliography}{}
 
+\bibitem[Abellán-García et~al. 2012]{Abellán-García_2012}
+Abellán-García, F.~J., García-Gamuz, J.~A., Valerdi-Pérez, R.~P., and
+  Ibáñez-Mengual, J.~A. (2012).
+\newblock Gravity acceleration measurements using a soundcard.
+\newblock {\em European Journal of Physics}, 33(5):1271.
+
+\bibitem[Alvarado~Ramírez et~al. 2012]{alvarado}
+Alvarado~Ramírez, S., Marín, E., Juárez, A., Calderón, A., Calderón, C.,
+  and Tsonchev, R. (2012).
+\newblock A hot-wire method based thermal conductivity measurement apparatus
+  for teaching purposes a hot-wire method based thermal conductivity
+  measurement apparatus for teaching purposes.
+\newblock {\em European Journal of Physics - EUR J PHYS}, 33:897--906.
+
+\bibitem[Arsenic et~al. 2024]{arsenic}
+Arsenic, I., Krmar, M., Radulović, B., Semchukov, P., Yarygin, G., and
+  Sidorov, N. (2024).
+\newblock An inexpensive way to introduce students to gamma spectroscopy.
+\newblock {\em European Journal of Physics}, 45.
+
+\bibitem[Bessa et~al. 2021]{bessa}
+Bessa, A., Ferreira, P., and Lisboa, R. (2021).
+\newblock Optimizing acceleration measurements using a single photogate.
+\newblock {\em European Journal of Physics}, 42.
+
+\bibitem[Campana et~al. 2024]{Campana_2024}
+Campana, P., Carobene, R., Cipelli, E., Gobbo, M., Perego, A., and Vertemati,
+  D. (2024).
+\newblock A graduate laboratory experiment to set up a photon-counting detector
+  using mkids.
+\newblock {\em European Journal of Physics}, 45(4):045802.
+
+\bibitem[Caputo et~al. 2021]{9459881}
+Caputo, E., Lo~Moriello, R.~S., de~Pandi, F., Liccardo, A., Gallicchio, V., and
+  Quarto, M. (2021).
+\newblock Exploiting augmented reality and internet of things for gamma ray
+  experiments in educational field.
+\newblock In {\em 2021 IEEE International Instrumentation and Measurement
+  Technology Conference (I2MTC)}, pages 1--6.
+
+\bibitem[Carvalho et~al. 2025]{11249568}
+Carvalho, W., Alves, M., Burlamaqui, A., and Burlamaqui, A. (2025).
+\newblock Ohmly: Development and application of an arduino-based educational
+  kit for teaching ohm's first law in youth and adult education.
+\newblock In {\em 2025 Brazilian Symposium on Robotics (SBR) and 2025 Workshop
+  on Robotics in Education (WRE)}, pages 432--436.
+
+\bibitem[Charalampopoulos and Moutis 2025]{charalampopoulos}
+Charalampopoulos, K. and Moutis, N. (2025).
+\newblock Design and evaluation of a simple free-fall apparatus for accurate
+  measurement of gravitational acceleration.
+\newblock {\em European Journal of Physics}, 47.
+
+\bibitem[Cigada and Manzoni 2022]{cigada}
+Cigada, A. and Manzoni, S. (2022).
+\newblock {\em Distributed Home Labs at the Time of the Covid}, pages 21--28.
+
+\bibitem[Costas-Perez et~al. 2008]{4490308}
+Costas-Perez, L., Lago, D., Farina, J., and Rodriguez-Andina, J.~J. (2008).
+\newblock Optimization of an industrial sensor and data acquisition laboratory
+  through time sharing and remote access.
+\newblock {\em IEEE Transactions on Industrial Electronics}, 55(6):2397--2404.
+
+\bibitem[Csernovszky and Horváth 2018]{Csernovszky_2018}
+Csernovszky, Z. and Horváth, �. (2018).
+\newblock Organic solar cells and physics education.
+\newblock {\em European Journal of Physics}, 39(4):045804.
+
+\bibitem[Essaadaoui et~al. 2021]{9419655}
+Essaadaoui, R., Moussaouy, A.~E., Hadi, M.~E., Ouariach, A., Hachmi, A.,
+  Mommadi, O., and Bria, D. (2021).
+\newblock Construction of an educational device for real time data acquisition
+  based on arduino for a calorimetric study.
+\newblock In {\em 2021 9th International Conference on Information and
+  Education Technology (ICIET)}, pages 21--25.
+
 \bibitem[{European Journal of Physics} 2026]{iop}
 {European Journal of Physics} (2026).
 \newblock {European Journal of Physics - IOPscience}.
 \newblock \url{https://iopscience.iop.org/journal/0143-0807}.
 \newblock Accessed: 2026-05-01.
+
+\bibitem[Foesel and Gehring 2025]{Foesel2025AcousticsIT}
+Foesel, A. and Gehring, I. (2025).
+\newblock Acoustics in the daily life of bats.
+\newblock {\em European Journal of Physics}, 46.
+
+\bibitem[Foesel and Hinz 2025]{Foesel_2025}
+Foesel, A. and Hinz, D. (2025).
+\newblock Learning physics while monitoring vibrations of the
+  earth—investigating seismic phenomena by using a raspberry pi.
+\newblock {\em European Journal of Physics}, 46(2):025802.
+
+\bibitem[Frick et~al. 2018]{JFrick2018WhenGI}
+Frick, M.~J., Gupta, S.~R., and Bechhoefer, J. (2018).
+\newblock When geometry is irrelevant for heat diffusion: the transition from
+  lumped-element to field formulations.
+\newblock {\em European Journal of Physics}, 39.
+
+\bibitem[Galan et~al. 2018]{galan}
+Galan, D., Isaksson, O., Rostedt, M., Enger, J., Hanstorp, D., and de~la Torre,
+  L. (2018).
+\newblock A remote laboratory for optical levitation of charged droplets.
+\newblock {\em European Journal of Physics}, 39.
+
+\bibitem[Hemond et~al. 2012]{6314511}
+Hemond, B.~D., Wahab, A., Spanbauer, A., Hunter, I.~W., Hughey, B.~J., and
+  Jones, L.~A. (2012).
+\newblock Mica: an innovative approach to remote data acquisition.
+\newblock {\em IEEE Instrumentation & Measurement Magazine}, 15(5):22--27.
 
 \bibitem[Higgins et~al. 2024]{cochrane_handbook_2024}
 Higgins, J., Thomas, J., Chandler, J., Cumpston, M., Li, T., and Page, M.~e.
@@ -13,12 +118,79 @@ Higgins, J., Thomas, J., Chandler, J., Cumpston, M., Li, T., and Page, M.~e.
   version 6.5 (updated August 2024)}.
 \newblock Cochrane.
 
+\bibitem[Huff et~al. 2019]{huff}
+Huff, A., Thompson, J., Pate, J., Chiao, R., and Sharping, J. (2019).
+\newblock A parametric oscillator for classroom demonstration or student
+  laboratory.
+\newblock {\em European Journal of Physics}, 40.
+
+\bibitem[Hurtado-Velasco et~al. 2018]{Hurtado-Velasco_2018}
+Hurtado-Velasco, R., Villota-Narvaez, Y., Florez, D., and Carrillo, H. (2018).
+\newblock Video analysis-based estimation of bearing friction factors.
+\newblock {\em European Journal of Physics}, 39(6):065807.
+
 \bibitem[{IEEE Xplore} 2026]{ieee}
 {IEEE Xplore} (2026).
 \newblock {IEEE Xplore Digital Library | IEEE Journals & Magazine | IEEE
   Xplore}.
 \newblock \url{https://ieeexplore.ieee.org/}.
 \newblock Accessed: 2026-05-01.
+
+\bibitem[Karpa et~al. 2025]{11322379}
+Karpa, M., Osolinskyi, O., Maikiv, I., and Tsiupa, I. (2025).
+\newblock Intelligent system for adaptive resource management in a hybrid
+  educational laboratory.
+\newblock In {\em 2025 IEEE 13th International Conference on Intelligent Data
+  Acquisition and Advanced Computing Systems: Technology and Applications
+  (IDAACS)}, pages 1--7.
+
+\bibitem[Kyomugisha et~al. 2012]{6293152}
+Kyomugisha, H., Kigezi, T., Mwikirize, C., Akol, R., Orishaba, D., and Kyesswa,
+  M. (2012).
+\newblock A remote direct sequence spread spectrum communications lab utilising
+  the emona datex.
+\newblock In {\em 2012 9th International Conference on Remote Engineering and
+  Virtual Instrumentation (REV)}, pages 1--6.
+
+\bibitem[Laksono et~al. 2015]{laksono}
+Laksono, P.~W., Jauhari, W.~A., Iftadi, I., Ayu, K.~C., Pandu, B. P.~I.,
+  Jamaluddin, A., Saputro, D.~E., and Haijunowibowo, D. (2015).
+\newblock A system based on fuzzy logic approach to control humidity and
+  temperature in fungus cultivation.
+\newblock In {\em Proceedings of the Joint International Conference on Electric
+  Vehicular Technology and Industrial, Mechanical, Electrical and Chemical
+  Engineering (ICEVT & IMECE)}, pages 344--347.
+
+\bibitem[Mohapatra et~al. 2017]{7977365}
+Mohapatra, D., Kashyap, N., Biswal, A.~P., and Padhee, S. (2017).
+\newblock Design of measurement and data acquisition laboratory for
+  instrumentation engineering course.
+\newblock In {\em 2017 3rd International Conference on Computational
+  Intelligence & Communication Technology (CICT)}, pages 1--6.
+
+\bibitem[Murray et~al. 2020]{Murray_2020}
+Murray, A.~J., Cunane, P., and Harvey, M. (2020).
+\newblock An undergraduate laboratory experiment to build and characterize a
+  thermionic triode for use as an audio amplifier.
+\newblock {\em European Journal of Physics}, 41(6):065706.
+
+\bibitem[Murray and Harvey 2020]{Murray_2020_2}
+Murray, A.~J. and Harvey, M. (2020).
+\newblock An undergraduate laboratory experiment to determine the critical
+  point of sf6 using light scattering at selected wavelengths.
+\newblock {\em European Journal of Physics}, 41(6):065302.
+
+\bibitem[Negrete et~al. 2020]{Negrete_2020}
+Negrete, O., Lisboa, A., Peña, F.~J., Dib, C.~O., and Vargas, P. (2020).
+\newblock Teaching labs for blind students: equipment to measure the thermal
+  expansion coefficient of a metal.
+\newblock {\em European Journal of Physics}, 41(3):035704.
+
+\bibitem[Nino et~al. 2014]{Nino_2014}
+Nino, D., Wang, H., and N~Milstein, J. (2014).
+\newblock Rapid feedback control and stabilization of an optical tweezers with
+  a budget microcontroller.
+\newblock {\em European Journal of Physics}, 35(5):055009.
 
 \bibitem[{Parsifal} 2026]{parsifal}
 {Parsifal} (2026).
@@ -34,10 +206,94 @@ Pedregosa, F. et~al. (2026).
   }.
 \newblock Accessed: 2026-05-03.
 
+\bibitem[Pierre et~al. 2009]{pierre}
+Pierre, J., Tuffner, F., Anderson, J., Whitman, D., Ula, A., Kubichek, R.,
+  Wright, C., Barrett, S., Cupal, J., and Hamann, J. (2009).
+\newblock A one-credit hands-on introductory course in electrical and computer
+  engineering using a variety of topic modules.
+\newblock {\em Education, IEEE Transactions on}, 52:263 -- 272.
+
+\bibitem[Pilakouta et~al. 2017]{pilakouta}
+Pilakouta, M., SAVVIDOU, A., and Vasileiadou, S. (2017).
+\newblock A laboratory activity for teaching natural radioactivity.
+\newblock {\em European Journal of Physics}, 38:015801.
+
+\bibitem[Plaza~Merino et~al. 2016]{plaza}
+Plaza~Merino, P., Sancristobal, E., Carro~Fernandez, G., and Castro, M. (2016).
+\newblock A wireless robotic educational platform approach.
+\newblock pages 145--152.
+
+\bibitem[Santos and Nunes 2026]{11406157}
+Santos, J. F. M.~d. and Nunes, L. A. d.~O. (2026).
+\newblock Integrating microcontrollers and data analysis in mechanics
+  education: A stem approach to free fall.
+\newblock {\em IEEE Revista Iberoamericana de Tecnologias del Aprendizaje},
+  21:101--107.
+
+\bibitem[Simon et~al. 2023]{simon}
+Simon, N., Ambrosio, B.~J., and Hermosa, N. (2023).
+\newblock A simple calibration experiment for light dependent resistors using
+  malus law.
+\newblock {\em European Journal of Physics}, 44.
+
+\bibitem[Steinmeyer 2012]{6204181}
+Steinmeyer, J.~D. (2012).
+\newblock Accelerated project-based introduction to eecs for high school
+  students.
+\newblock In {\em IEEE 2nd Integrated STEM Education Conference}, pages 1--5.
+
+\bibitem[Torres~Payoma et~al. 2023]{torres}
+Torres~Payoma, F., Herrera, D., Triana, K., Neira-Quintero, L., and Castaño,
+  J. (2023).
+\newblock Computing the gravitational acceleration within the world pendulum
+  alliance as an application of the remote laboratory methodology.
+\newblock {\em European Journal of Physics}, 44.
+
+\bibitem[Vadai et~al. 2012]{Vadai_2012}
+Vadai, G., Gingl, Z., and Mellár, J. (2012).
+\newblock Real-time demonstration of the main characteristics of chaos in the
+  motion of a real double pendulum.
+\newblock {\em European Journal of Physics}, 33(4):907.
+
+\bibitem[Vidal et~al. 2022]{9829840}
+Vidal, J., Bravo, D.~A., and Rengifo, C.~F. (2022).
+\newblock Teaching physical sciences using arduino physics lab at the
+  universidad del cauca.
+\newblock {\em IEEE Revista Iberoamericana de Tecnologias del Aprendizaje},
+  17(3):223--229.
+
+\bibitem[Wadhwa 2021]{Wadhwa_2022}
+Wadhwa, A. (2021).
+\newblock Study of coefficient of discharge through orifices.
+\newblock {\em European Journal of Physics}, 43(1):015702.
+
 \bibitem[Wohlin et~al. 2012]{wohlin2012experimentation}
 Wohlin, C., Runeson, P., H{\"o}st, M., Ohlsson, M.~C., Regnell, B., and
   Wessl{\'e}n, A. (2012).
 \newblock {\em Experimentation in Software Engineering}.
 \newblock Springer.
+
+\bibitem[Zachariadou and Yiasemides 2014]{zachariadou}
+Zachariadou, K. and Yiasemides, K. (2014).
+\newblock A laboratory over the internet for a course on data analysis.
+\newblock {\em European Journal of Physics}, 35:035020.
+
+\bibitem[Zachariadou et~al. 2012]{katerina}
+Zachariadou, K., Yiasemides, K., and Trougkakos, N. (2012).
+\newblock A low-cost computer-controlled arduino-based educational laboratory
+  system for teaching the fundamentals of photovoltaic cells.
+\newblock {\em European Journal of Physics}, 33:1599.
+
+\bibitem[Zhang and Li 2009]{5358964}
+Zhang, J. and Li, J. (2009).
+\newblock Design of a network virtual laboratory system for digital signal
+  processing experiments.
+\newblock In {\em 2009 International Conference on E-Learning, E-Business,
+  Enterprise Information Systems, and E-Government}, pages 84--86.
+
+\bibitem[Zhao et~al. 2021]{Zhao_2021}
+Zhao, X., Hebden, J., and Yerworth, R. (2021).
+\newblock Ultrasound scanner—teaching tool.
+\newblock {\em European Journal of Physics}, 42(5):055703.
 
 \end{thebibliography}

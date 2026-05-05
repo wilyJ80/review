@@ -3,44 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: sbc.bst
 Database file #1: sbc-template.bib
-You've used 6 entries,
+Warning--empty publisher in cigada
+Warning--empty booktitle in plaza
+You've used 47 entries,
             1935 wiz_defined-function locations,
-            500 strings with 4654 characters,
-and the built_in function-call counts, 1927 in all, are:
-= -- 189
-> -- 100
-< -- 4
-+ -- 34
-- -- 34
-* -- 142
-:= -- 378
-add.period$ -- 22
-call.type$ -- 6
-change.case$ -- 44
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 67
-empty$ -- 104
-format.name$ -- 41
-if$ -- 353
+            715 strings with 13300 characters,
+and the built_in function-call counts, 20167 in all, are:
+= -- 1886
+> -- 1021
+< -- 26
++ -- 384
+- -- 354
+* -- 1733
+:= -- 3535
+add.period$ -- 144
+call.type$ -- 47
+change.case$ -- 408
+chr.to.int$ -- 47
+cite$ -- 49
+duplicate$ -- 745
+empty$ -- 1306
+format.name$ -- 420
+if$ -- 3947
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 37
-num.names$ -- 18
-pop$ -- 34
+missing$ -- 44
+newline$ -- 241
+num.names$ -- 141
+pop$ -- 375
 preamble$ -- 1
-purify$ -- 46
+purify$ -- 411
 quote$ -- 0
-skip$ -- 55
+skip$ -- 566
 stack$ -- 0
-substring$ -- 72
-swap$ -- 3
-text.length$ -- 0
+substring$ -- 1179
+swap$ -- 116
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 34
-warning$ -- 0
-while$ -- 12
+type$ -- 278
+warning$ -- 2
+while$ -- 137
 width$ -- 0
-write$ -- 82
+write$ -- 612
+(There were 2 warnings)
