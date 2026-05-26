@@ -20,3 +20,7 @@ Devo continuar ou parar e ver essas informacoes faltantes? Falar com o professor
 3. Experimento de Fisica
 
 - Ainda nao definido o experimento. Devo ter isso logo? Essa escolha depende
+
+4. Validacao
+
+- Diretamente ligada ao gap de pesquisa: comparativo de custo, alem de identificacao de precisao de leituras. Minha preocupacao e com a necessidade de fazer um estudo comparativo detalhado, e ter que arcar com os custos de um DAQ (Data Acquisition Board), ...
