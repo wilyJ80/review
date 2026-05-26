@@ -7,7 +7,7 @@ Orientador: Claudio Alves de Amorim
 Area da Computacao: Sistemas Embarcados
 Area de Concentracao: Instrumentacao de Experimentos de Fisica
 Universidade do Estado da Bahia
-Departamento de Ceincias Exatas e da Terra
+Departamento de Cincias Exatas e da Terra
 
 ## Folha de aprovacao
 
