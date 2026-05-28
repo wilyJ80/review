@@ -66,7 +66,7 @@
         {\Large \textbf{Folha de Aprovação}} \\[2cm]
     \end{center}
     
-    Anteprojeto sob o título provisório \textit{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Jorge Alberto Prado de Campos, professor da disciplina, em 28 de maio de 2026, em Salvador, Bahia.
+    Anteprojeto sob o título \textit{Solucao de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Jorge Alberto Prado de Campos, professor da disciplina, em 28 de maio de 2026, em Salvador, Bahia.
     
     \vspace{3cm}
     
@@ -136,7 +136,7 @@ A contribuição tecnológica assegura-se pela abordagem pragmática da abordage
 % ---------------------------------------------------
 \section{Metodologia}
 
-A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada}, pois busca resolver um problema prático do ambiente de ensino. Possui objetivos de caráter \textbf{Exploratório} e abordagem \textbf{Quantitativa}, configurando-se proceduralmente como um \textbf{Desenvolvimento Tecnológico}. O trabalho será conduzido nas seguintes etapas:
+A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada}, pois busca resolver um problema prático do ambiente de ensino. Possui objetivos de caráter \textbf{Exploratório}, devido a busca de familiaridade e identificacao de lacunas, assim como avaliacao de alternativas. Possui abordagem \textbf{Quantitativa}, por tratar de metricas de software na avaliacao dos dados. Configura-se proceduralmente como um \textbf{Desenvolvimento Tecnológico}, por culminar em um sistema completo. O trabalho será conduzido nas seguintes etapas:
 
 \textbf{1. Especificação de Hardware e Software:} Realizar-se-á uma avaliação das tecnologias embarcadas (como o ecossistema ESP32 com Wi-Fi integrado ou alternativas como o Arduino Uno R3 em conjunto com módulos externos de conectividade) considerando suas limitações e vantagens para leitura de sensores (analógicos e digitais). No software, a \textit{stack} tecnológica será delimitada visando a não obstrução das leituras, com a definição do modelo de comunicação entre os microcontroladores e a interface gráfica baseada em web (alojada, por exemplo, em um Raspberry Pi atuando como servidor/banco de dados central).
 
@@ -146,7 +146,7 @@ A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada
 
 \textbf{4. Validação e Coleta de Dados:} O foco primário da validação será quantitativo, observando dois aspectos:
 \begin{itemize}
-    \item \textit{Desempenho da Aquisição:} Aferição da densidade de leituras (taxa de amostragem sustentada) no servidor central para garantir que a taxa de transmissão da placa seja o suficiente para representar o fenômeno físico contínuo. Análises profundas de protocolo de rede não farão parte do escopo de validação.
+    \item \textit{Desempenho da Aquisição:} Aferição da densidade de leituras (taxa de amostragem sustentada) no servidor central para garantir que a taxa de transmissão da placa seja o suficiente para representar o fenômeno físico contínuo. Análises profundas de protocolo de rede não farão parte do escopo de validação. Analise sera mediada por comparacao com solucoes existentes, sejam elas apresentadas em trabalhos anteriores ou identificadas em experimentacao em laboratorio durante o processo de desenvolvimento.
     \item \textit{Precisão da Medida Física:} Comparativo do resultado inferido (ex: aceleração local da gravidade ou período de oscilação) com os valores teóricos esperados ou aferidos por instrumentos pré-existentes.
 \end{itemize}
 
