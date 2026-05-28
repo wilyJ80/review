@@ -24,7 +24,7 @@
     \begin{center}
         {\large \textbf{Victor Hugo Bitencourt}} \\[7cm]
         
-        {\LARGE \textbf{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física}} \\[8cm]
+        {\LARGE \textbf{Solução de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física}} \\[8cm]
         
         {\large Salvador-BA} \\
         {\large 28 de maio de 2026}
@@ -38,13 +38,13 @@
     \begin{center}
         {\large \textbf{Victor Hugo Bitencourt}} \\[5cm]
         
-        {\LARGE \textbf{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física}} \\[3cm]
+        {\LARGE \textbf{Solução de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física}} \\[3cm]
         
         \begin{flushright}
             \begin{minipage}{8cm}
                 Anteprojeto de Trabalho de Conclusão de Curso apresentado ao curso de Bacharelado em Sistemas de Informação.\\
                 \textbf{Área da Computação:} Sistemas Embarcados / Internet das Coisas (IoT)\\
-                \textbf{Orientador:} Prof. Me. Cláudio Alves de Amorim
+                \textbf{Orientador:} Prof. Dr. Cláudio Alves de Amorim
             \end{minipage}
         \end{flushright}
         
@@ -66,7 +66,7 @@
         {\Large \textbf{Folha de Aprovação}} \\[2cm]
     \end{center}
     
-    Anteprojeto sob o título provisório \textit{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Marco Antônio Costa Simões e Diego Frias, professores da disciplina, em 28 de maio de 2026, em Salvador, Bahia.
+    Anteprojeto sob o título provisório \textit{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Jorge Alberto Prado de Campos, professor da disciplina, em 28 de maio de 2026, em Salvador, Bahia.
     
     \vspace{3cm}
     
@@ -76,7 +76,7 @@
         Orientando \\[2cm]
         
         \rule{10cm}{0.1mm} \\
-        Prof. Me. Cláudio Alves de Amorim \\
+        Prof. Dr. Cláudio Alves de Amorim \\
         Orientador
     \end{center}
 \end{titlepage}
@@ -129,7 +129,7 @@ A motivação central deste trabalho é tecnológica e econômica. Atualmente, o
 
 No âmbito científico, a revisão sistemática apontou para uma lacuna pertinente: embora existam muitos projetos educacionais, poucos equilibram de fato o custo da arquitetura com a precisão exigida para validação física, especialmente sob comunicação sem fio. 
 
-A contribuição tecnológica assegura-se pelo ineditismo prático da abordagem integrada: fornecer uma infraestrutura \textit{plug-and-play} em que o orientador do laboratório possa gerenciar múltiplos nós sensores, persistir e analisar dados experimentais através de uma interface gráfica amigável, livre de emaranhados de cabos e dependências comerciais limitantes.
+A contribuição tecnológica assegura-se pela abordagem pragmática da abordagem integrada: fornecer uma infraestrutura em que o orientador do laboratório possa gerenciar múltiplos nós sensores, persistir e analisar dados experimentais através de uma interface gráfica amigável, livre de emaranhados de cabos e dependências comerciais limitantes.
 
 % ---------------------------------------------------
 % 4. METODOLOGIA
@@ -138,7 +138,7 @@ A contribuição tecnológica assegura-se pelo ineditismo prático da abordagem 
 
 A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada}, pois busca resolver um problema prático do ambiente de ensino. Possui objetivos de caráter \textbf{Exploratório} e abordagem \textbf{Quantitativa}, configurando-se proceduralmente como um \textbf{Desenvolvimento Tecnológico}. O trabalho será conduzido nas seguintes etapas:
 
-\textbf{1. Especificação de Hardware e Software:} Realizar-se-á uma avaliação das tecnologias embarcadas (como o ecossistema ESP32 com Wi-Fi integrado ou alternativas como o Arduino Uno R3 em conjunto com módulos externos de conectividade) considerando suas limitações e vantagens para leitura de sensores (analógicos e digitais). No software, a pilha tecnológica será delimitada visando a não obstrução das leituras, com a definição do modelo de comunicação entre os microcontroladores e a interface gráfica baseada em web (alojada, por exemplo, em um Raspberry Pi atuando como servidor/banco de dados central).
+\textbf{1. Especificação de Hardware e Software:} Realizar-se-á uma avaliação das tecnologias embarcadas (como o ecossistema ESP32 com Wi-Fi integrado ou alternativas como o Arduino Uno R3 em conjunto com módulos externos de conectividade) considerando suas limitações e vantagens para leitura de sensores (analógicos e digitais). No software, a \textit{stack} tecnológica será delimitada visando a não obstrução das leituras, com a definição do modelo de comunicação entre os microcontroladores e a interface gráfica baseada em web (alojada, por exemplo, em um Raspberry Pi atuando como servidor/banco de dados central).
 
 \textbf{2. Desenvolvimento da Arquitetura:} Implementação do \textit{firmware} responsável por realizar a coleta nos nós experimentais e enviar a telemetria, e implementação do sistema centralizado para persistência e visualização da interface gráfica pelo usuário final.
 
