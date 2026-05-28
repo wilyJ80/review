@@ -1,0 +1,198 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes essenciais
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+% Configuração de espaçamento (1.5)
+\setstretch{1.5}
+
+\begin{document}
+
+% ---------------------------------------------------
+% CAPA
+% ---------------------------------------------------
+\begin{titlepage}
+    \begin{center}
+        {\large \textbf{Victor Hugo Bitencourt}} \\[7cm]
+        
+        {\LARGE \textbf{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física}} \\[8cm]
+        
+        {\large Salvador-BA} \\
+        {\large 28 de maio de 2026}
+    \end{center}
+\end{titlepage}
+
+% ---------------------------------------------------
+% FOLHA DE ROSTO
+% ---------------------------------------------------
+\begin{titlepage}
+    \begin{center}
+        {\large \textbf{Victor Hugo Bitencourt}} \\[5cm]
+        
+        {\LARGE \textbf{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física}} \\[3cm]
+        
+        \begin{flushright}
+            \begin{minipage}{8cm}
+                Anteprojeto de Trabalho de Conclusão de Curso apresentado ao curso de Bacharelado em Sistemas de Informação.\\
+                \textbf{Área da Computação:} Sistemas Embarcados / Internet das Coisas (IoT)\\
+                \textbf{Orientador:} Prof. Me. Cláudio Alves de Amorim
+            \end{minipage}
+        \end{flushright}
+        
+        \vspace{4cm}
+        
+        \textsc{UNEB - Universidade do Estado da Bahia}\\
+        \textsc{Departamento de Ciências Exatas e da Terra} \\[2cm]
+        
+        {\large Salvador-BA} \\
+        {\large 28 de maio de 2026}
+    \end{center}
+\end{titlepage}
+
+% ---------------------------------------------------
+% FOLHA DE APROVAÇÃO
+% ---------------------------------------------------
+\begin{titlepage}
+    \begin{center}
+        {\Large \textbf{Folha de Aprovação}} \\[2cm]
+    \end{center}
+    
+    Anteprojeto sob o título provisório \textit{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Marco Antônio Costa Simões e Diego Frias, professores da disciplina, em 28 de maio de 2026, em Salvador, Bahia.
+    
+    \vspace{3cm}
+    
+    \begin{center}
+        \rule{10cm}{0.1mm} \\
+        Victor Hugo Bitencourt \\
+        Orientando \\[2cm]
+        
+        \rule{10cm}{0.1mm} \\
+        Prof. Me. Cláudio Alves de Amorim \\
+        Orientador
+    \end{center}
+\end{titlepage}
+
+% ---------------------------------------------------
+% SUMÁRIO
+% ---------------------------------------------------
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\setcounter{page}{4} % Ajusta a numeração da página para bater com o sumário
+
+% ---------------------------------------------------
+% 1. INTRODUÇÃO
+% ---------------------------------------------------
+\section{Introdução}
+
+O ensino experimental em laboratórios de Física é fundamental para a consolidação teórica dos estudantes, permitindo a observação empírica de fenômenos modelados em sala de aula. No entanto, a instrumentação comercial utilizada para a coleta e análise de dados baseia-se frequentemente em sistemas proprietários de aquisição de dados (DAQ). Esses equipamentos, além de possuírem alto custo de aquisição e manutenção, engessam a escalabilidade e dificultam a modernização da infraestrutura, especialmente em instituições públicas de ensino.
+
+Conforme identificado na revisão sistemática da literatura previamente conduzida, há uma tendência crescente na adoção de abordagens baseadas em sistemas embarcados focadas no equilíbrio entre baixo custo e precisão analítica. Soluções apoiadas em microcontroladores provaram-se eficazes na reprodução de resultados de alta fidelidade física. Contudo, grande parte dos estudos apresenta arquiteturas isoladas, exigindo conexão física (geralmente via interface USB) a computadores dedicados por bancada. Essa exigência arquitetural gera ociosidade de hardware (como a necessidade de um Raspberry Pi ou desktop dedicado em cada experimento) e impossibilita o monitoramento centralizado e a persistência eficiente dos resultados em nuvem ou servidores locais.
+
+Diante desse cenário, surge a necessidade de explorar soluções que combinem a acessibilidade financeira dos microcontroladores à flexibilidade das redes sem fio, promovendo uma coleta de dados fluida e integrada. 
+
+Desta forma, o presente trabalho define como problema de pesquisa: \textbf{Como desenvolver e validar uma arquitetura de baixo custo com precisão aceitável, baseada em comunicação sem fio, para a aquisição e monitoramento centralizado de experimentos didáticos em laboratórios de Física?}
+
+% ---------------------------------------------------
+% 2. OBJETIVOS
+% ---------------------------------------------------
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+Construir e validar um sistema de aquisição, monitoramento e controle para múltiplos experimentos didáticos de Física, utilizando microcontroladores de baixo custo integrados a um servidor centralizado via rede sem fio (Wi-Fi), com acesso por interface gráfica.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+    \item Avaliar plataformas microcontroladas para estabelecer a relação ideal entre custo, processamento, capacidade de leitura (digital ou analógica) e conectividade sem fio.
+    \item Projetar a arquitetura de software (aplicação web/servidor e nós embarcados), selecionando metodologias de processamento adequadas para o recebimento de telemetria centralizada.
+    \item Implementar a arquitetura desenvolvida em uma Prova de Conceito (PoC) utilizando um experimento de Física em laboratório real.
+    \item Validar o sistema aferindo sua precisão física mediante comparação com a literatura e avaliando parâmetros básicos de telemetria, como a densidade de leituras (taxa de amostragem no servidor central).
+\end{itemize}
+
+% ---------------------------------------------------
+% 3. JUSTIFICATIVAS E CONTRIBUIÇÕES
+% ---------------------------------------------------
+\section{Justificativas e Contribuições}
+
+A motivação central deste trabalho é tecnológica e econômica. Atualmente, os dispositivos experimentais didáticos funcionam sem conexão ou, quando conectados, exigem hardware dedicado que permanece ocioso grande parte do tempo. O desenvolvimento de uma arquitetura centralizada visa minimizar essa ociosidade, permitindo que laboratórios escolares e universitários sejam equipados a um custo substancialmente reduzido, operando múltiplos experimentos simultâneos orquestrados por um único ponto central de processamento.
+
+No âmbito científico, a revisão sistemática apontou para uma lacuna pertinente: embora existam muitos projetos educacionais, poucos equilibram de fato o custo da arquitetura com a precisão exigida para validação física, especialmente sob comunicação sem fio. 
+
+A contribuição tecnológica assegura-se pelo ineditismo prático da abordagem integrada: fornecer uma infraestrutura \textit{plug-and-play} em que o orientador do laboratório possa gerenciar múltiplos nós sensores, persistir e analisar dados experimentais através de uma interface gráfica amigável, livre de emaranhados de cabos e dependências comerciais limitantes.
+
+% ---------------------------------------------------
+% 4. METODOLOGIA
+% ---------------------------------------------------
+\section{Metodologia}
+
+A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada}, pois busca resolver um problema prático do ambiente de ensino. Possui objetivos de caráter \textbf{Exploratório} e abordagem \textbf{Quantitativa}, configurando-se proceduralmente como um \textbf{Desenvolvimento Tecnológico}. O trabalho será conduzido nas seguintes etapas:
+
+\textbf{1. Especificação de Hardware e Software:} Realizar-se-á uma avaliação das tecnologias embarcadas (como o ecossistema ESP32 com Wi-Fi integrado ou alternativas como o Arduino Uno R3 em conjunto com módulos externos de conectividade) considerando suas limitações e vantagens para leitura de sensores (analógicos e digitais). No software, a pilha tecnológica será delimitada visando a não obstrução das leituras, com a definição do modelo de comunicação entre os microcontroladores e a interface gráfica baseada em web (alojada, por exemplo, em um Raspberry Pi atuando como servidor/banco de dados central).
+
+\textbf{2. Desenvolvimento da Arquitetura:} Implementação do \textit{firmware} responsável por realizar a coleta nos nós experimentais e enviar a telemetria, e implementação do sistema centralizado para persistência e visualização da interface gráfica pelo usuário final.
+
+\textbf{3. Montagem da Prova de Conceito (Experimento):} Visando mitigar distorções causadas por conversores analógico-digitais (ADCs) de baixo desempenho comuns em placas acessíveis, o experimento de prova de conceito dará preferência à avaliação de fenômenos que se apoiem em leitura de sinais digitais e transições de tempo lógico (como medições com sensores ultrassônicos ou fotoportas em experimentos de Cinemática, como Queda Livre ou Pêndulo Simples). A definição exata ocorrerá no ciclo de projeto.
+
+\textbf{4. Validação e Coleta de Dados:} O foco primário da validação será quantitativo, observando dois aspectos:
+\begin{itemize}
+    \item \textit{Desempenho da Aquisição:} Aferição da densidade de leituras (taxa de amostragem sustentada) no servidor central para garantir que a taxa de transmissão da placa seja o suficiente para representar o fenômeno físico contínuo. Análises profundas de protocolo de rede não farão parte do escopo de validação.
+    \item \textit{Precisão da Medida Física:} Comparativo do resultado inferido (ex: aceleração local da gravidade ou período de oscilação) com os valores teóricos esperados ou aferidos por instrumentos pré-existentes.
+\end{itemize}
+
+% ---------------------------------------------------
+% 5. CRONOGRAMA
+% ---------------------------------------------------
+\section{Cronograma}
+
+As atividades relacionadas ao desenvolvimento e execução da segunda etapa do Trabalho de Conclusão de Curso (TCC II) estão planejadas para o segundo semestre letivo de 2026, conforme disposto na Tabela 1.
+
+\begin{table}[h]
+\centering
+\caption{Cronograma de Execução - TCC II (Julho a Dezembro de 2026)}
+\vspace{0.3cm}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Atividade} & \textbf{Jul} & \textbf{Ago} & \textbf{Set} & \textbf{Out} & \textbf{Nov} & \textbf{Dez} \\
+\midrule
+Definição da plataforma de HW e experimento & $\bullet$ & & & & & \\
+Desenvolvimento do Firmware (Nós sensores) & $\bullet$ & $\bullet$ & & & & \\
+Desenvolvimento da Aplicação Web e BD      & & $\bullet$ & $\bullet$ & & & \\
+Montagem e integração da Prova de Conceito & & & $\bullet$ & $\bullet$ & & \\
+Testes de densidade de leitura e validação & & & & $\bullet$ & & \\
+Análise e consolidação dos resultados      & & & & $\bullet$ & $\bullet$ & \\
+Redação final da monografia                & & & & & $\bullet$ & $\bullet$ \\
+Defesa do Trabalho de Conclusão de Curso   & & & & & & $\bullet$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------------------------------------------
+% REFERÊNCIAS
+% ---------------------------------------------------
+\newpage
+\renewcommand\refname{Referências}
+\begin{thebibliography}{9}
+
+\bibitem{mica2012}
+HEMOND, B. D. et al. MICA: an innovative approach to remote data acquisition. \textit{IEEE Instrumentation \& Measurement Magazine}, v. 15, n. 5, p. 22-27, 2012.
+
+\bibitem{essaadaoui2021}
+ESSAADAOUI, R. et al. Construction of an educational device for real time data acquisition based on arduino for a calorimetric study. In: \textit{2021 9th International Conference on Information and Education Technology (ICIET)}. IEEE, 2021. p. 21-25.
+
+\bibitem{santos2026}
+SANTOS, J. F. M. d.; NUNES, L. A. d. O. Integrating microcontrollers and data analysis in mechanics education: A stem approach to free fall. \textit{IEEE Revista Iberoamericana de Tecnologias del Aprendizaje}, v. 21, p. 101-107, 2026.
+
+\end{thebibliography}
+
+\end{document}
