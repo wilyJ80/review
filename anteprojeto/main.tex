@@ -24,7 +24,7 @@
     \begin{center}
         {\large \textbf{Victor Hugo Bitencourt}} \\[7cm]
         
-        {\LARGE \textbf{Solução de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física}} \\[8cm]
+        {\LARGE \textbf{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física}} \\[8cm]
         
         {\large Salvador-BA} \\
         {\large 28 de maio de 2026}
@@ -38,7 +38,7 @@
     \begin{center}
         {\large \textbf{Victor Hugo Bitencourt}} \\[5cm]
         
-        {\LARGE \textbf{Solução de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física}} \\[3cm]
+        {\LARGE \textbf{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física}} \\[3cm]
         
         \begin{flushright}
             \begin{minipage}{8cm}
@@ -66,7 +66,7 @@
         {\Large \textbf{Folha de Aprovação}} \\[2cm]
     \end{center}
     
-    Anteprojeto sob o título \textit{Solucao de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Jorge Alberto Prado de Campos, professor da disciplina, em 28 de maio de 2026, em Salvador, Bahia.
+    Anteprojeto sob o título \textit{Arquitetura de Baixo Custo baseada em Redes Sem Fio para Monitoramento Centralizado de Experimentos Educacionais em Laboratórios de Física} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Victor Hugo Bitencourt} a Dr. Jorge Alberto Prado de Campos, professor da disciplina, em 2 de junho de 2026, em Salvador, Bahia.
     
     \vspace{3cm}
     
@@ -96,13 +96,13 @@
 % ---------------------------------------------------
 \section{Introdução}
 
-O ensino experimental em laboratórios de Física é fundamental para a consolidação teórica dos estudantes, permitindo a observação empírica de fenômenos modelados em sala de aula. No entanto, a instrumentação comercial utilizada para a coleta e análise de dados baseia-se frequentemente em sistemas proprietários de aquisição de dados (DAQ). Esses equipamentos, além de possuírem alto custo de aquisição e manutenção, engessam a escalabilidade e dificultam a modernização da infraestrutura, especialmente em instituições públicas de ensino.
+O ensino experimental em laboratórios de Física é fundamental para a consolidação teórica dos estudantes, permitindo a observação empírica de fenômenos modelados em sala de aula. No entanto, a instrumentação comercial utilizada para a coleta e análise de dados baseia-se frequentemente em sistemas proprietários de aquisição de dados (DAQ). Esses equipamentos possuem alto custo de aquisição e manutenção, o que afeta diretamente a realidade econômica brasileira, engessando a escalabilidade e dificultando a modernização da infraestrutura em instituições públicas de ensino.
 
-Conforme identificado na revisão sistemática da literatura previamente conduzida, há uma tendência crescente na adoção de abordagens baseadas em sistemas embarcados focadas no equilíbrio entre baixo custo e precisão analítica. Soluções apoiadas em microcontroladores provaram-se eficazes na reprodução de resultados de alta fidelidade física. Contudo, grande parte dos estudos apresenta arquiteturas isoladas, exigindo conexão física (geralmente via interface USB) a computadores dedicados por bancada. Essa exigência arquitetural gera ociosidade de hardware (como a necessidade de um Raspberry Pi ou desktop dedicado em cada experimento) e impossibilita o monitoramento centralizado e a persistência eficiente dos resultados em nuvem ou servidores locais.
+Conforme identificado na revisão sistemática da literatura previamente conduzida neste escopo, há uma tendência crescente na adoção de abordagens baseadas em sistemas embarcados que buscam alternativas viáveis de baixo custo. Embora a literatura contemple inovações, nota-se que o uso de ferramentas alternativas e não padronizadas para baratear os experimentos --- a exemplo da utilização de smartphones pessoais de estudantes para coleta de dados --- pode dificultar a gestão pedagógica, gerando distrações e falta de padronização nas aulas. Além disso, as soluções que empregam microcontroladores frequentemente operam de forma isolada, exigindo conexão física (via interface USB) a computadores dedicados por bancada. Essa exigência arquitetural gera ociosidade de hardware e inviabiliza o monitoramento centralizado dos resultados, dificultando o acompanhamento simultâneo de múltiplos grupos pelo docente.
 
-Diante desse cenário, surge a necessidade de explorar soluções que combinem a acessibilidade financeira dos microcontroladores à flexibilidade das redes sem fio, promovendo uma coleta de dados fluida e integrada. 
+Diante desse cenário, surge a necessidade de explorar soluções que combinem a acessibilidade financeira dos microcontroladores à flexibilidade das redes sem fio, com foco primordial na aplicabilidade educacional e na facilidade de implementação, garantindo uma coleta de dados fluida, padronizada e integrada. 
 
-Desta forma, o presente trabalho define como problema de pesquisa: \textbf{Como desenvolver e validar uma arquitetura de baixo custo com precisão aceitável, baseada em comunicação sem fio, para a aquisição e monitoramento centralizado de experimentos didáticos em laboratórios de Física?}
+Desta forma, o presente trabalho define como problema de pesquisa: \textbf{Como desenvolver e validar uma arquitetura de baixo custo, baseada em comunicação sem fio, focada na usabilidade educacional para a aquisição e monitoramento centralizado de experimentos em laboratórios de Física?}
 
 % ---------------------------------------------------
 % 2. OBJETIVOS
@@ -114,10 +114,10 @@ Construir e validar um sistema de aquisição, monitoramento e controle para mú
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-    \item Avaliar plataformas microcontroladas para estabelecer a relação ideal entre custo, processamento, capacidade de leitura (digital ou analógica) e conectividade sem fio.
+    \item Avaliar plataformas microcontroladas para estabelecer a relação ideal entre custo, processamento, capacidade de leitura e conectividade sem fio.
     \item Projetar a arquitetura de software (aplicação web/servidor e nós embarcados), selecionando metodologias de processamento adequadas para o recebimento de telemetria centralizada.
-    \item Implementar a arquitetura desenvolvida em uma Prova de Conceito (PoC) utilizando um experimento de Física em laboratório real.
-    \item Validar o sistema aferindo sua precisão física mediante comparação com a literatura e avaliando parâmetros básicos de telemetria, como a densidade de leituras (taxa de amostragem no servidor central).
+    \item Implementar a arquitetura desenvolvida em uma Prova de Conceito (PoC) utilizando um arranjo experimental didático de fácil montagem e alta relevância pedagógica.
+    \item Validar o sistema aferindo seu custo de implantação e a qualidade da experiência de uso, com foco na adequação da interface e viabilidade no contexto educacional.
 \end{itemize}
 
 % ---------------------------------------------------
@@ -125,29 +125,29 @@ Construir e validar um sistema de aquisição, monitoramento e controle para mú
 % ---------------------------------------------------
 \section{Justificativas e Contribuições}
 
-A motivação central deste trabalho é tecnológica e econômica. Atualmente, os dispositivos experimentais didáticos funcionam sem conexão ou, quando conectados, exigem hardware dedicado que permanece ocioso grande parte do tempo. O desenvolvimento de uma arquitetura centralizada visa minimizar essa ociosidade, permitindo que laboratórios escolares e universitários sejam equipados a um custo substancialmente reduzido, operando múltiplos experimentos simultâneos orquestrados por um único ponto central de processamento.
+A motivação central deste trabalho é educacional e econômica. Atualmente, os dispositivos experimentais didáticos funcionam sem conexão ou, quando conectados, exigem hardware dedicado que permanece ocioso grande parte do tempo. O desenvolvimento de uma arquitetura centralizada visa minimizar essa ociosidade, permitindo que laboratórios escolares e universitários sejam equipados a um custo substancialmente reduzido, operando múltiplos experimentos simultâneos orquestrados por um único ponto central de processamento.
 
-No âmbito científico, a revisão sistemática apontou para uma lacuna pertinente: embora existam muitos projetos educacionais, poucos equilibram de fato o custo da arquitetura com a precisão exigida para validação física, especialmente sob comunicação sem fio. 
+No âmbito acadêmico, a revisão sistemática apontou para uma lacuna pertinente: embora existam muitos projetos focados na precisão, poucos buscam equilibrar de fato o custo da arquitetura e a robustez técnica com a adequação pedagógica para professores e alunos, limitando a adoção real dessas tecnologias nas instituições. O uso de uma plataforma padronizada substitui improvisos e propicia uma melhor condução do experimento.
 
-A contribuição tecnológica assegura-se pela abordagem pragmática da abordagem integrada: fornecer uma infraestrutura em que o orientador do laboratório possa gerenciar múltiplos nós sensores, persistir e analisar dados experimentais através de uma interface gráfica amigável, livre de emaranhados de cabos e dependências comerciais limitantes.
+A contribuição tecnológica assegura-se pela abordagem pragmática da infraestrutura integrada: fornecer um ambiente em que o orientador do laboratório possa gerenciar múltiplos nós sensores, persistir e analisar dados experimentais através de uma interface gráfica amigável, livre de emaranhados de cabos e dependências comerciais limitantes. Isso abre portas também para trabalhos futuros no âmbito de experimentos conduzidos de forma remota ou híbrida.
 
 % ---------------------------------------------------
 % 4. METODOLOGIA
 % ---------------------------------------------------
 \section{Metodologia}
 
-A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada}, pois busca resolver um problema prático do ambiente de ensino. Possui objetivos de caráter \textbf{Exploratório}, devido a busca de familiaridade e identificacao de lacunas, assim como avaliacao de alternativas. Possui abordagem \textbf{Quantitativa}, por tratar de metricas de software na avaliacao dos dados. Configura-se proceduralmente como um \textbf{Desenvolvimento Tecnológico}, por culminar em um sistema completo. O trabalho será conduzido nas seguintes etapas:
+A presente pesquisa classifica-se, quanto à sua natureza, como \textbf{Aplicada}, pois busca resolver um problema prático do ambiente de ensino. Possui objetivos de caráter \textbf{Exploratório}, devido à busca por familiaridade, identificação de lacunas e avaliação de alternativas de hardware. Possui abordagem \textbf{Quantitativa e Qualitativa}, por tratar de métricas de software e medição de custos associadas à análise qualitativa da experiência de interação dos usuários em sala. Configura-se proceduralmente como um \textbf{Desenvolvimento Tecnológico}, por culminar na entrega de um sistema funcional completo. O trabalho será conduzido nas seguintes etapas:
 
-\textbf{1. Especificação de Hardware e Software:} Realizar-se-á uma avaliação das tecnologias embarcadas (como o ecossistema ESP32 com Wi-Fi integrado ou alternativas como o Arduino Uno R3 em conjunto com módulos externos de conectividade) considerando suas limitações e vantagens para leitura de sensores (analógicos e digitais). No software, a \textit{stack} tecnológica será delimitada visando a não obstrução das leituras, com a definição do modelo de comunicação entre os microcontroladores e a interface gráfica baseada em web (alojada, por exemplo, em um Raspberry Pi atuando como servidor/banco de dados central).
+\textbf{1. Especificação de Hardware e Software:} Realizar-se-á uma avaliação das tecnologias embarcadas (como o ecossistema ESP32 com Wi-Fi integrado ou alternativas como o Arduino Uno R3 em conjunto com módulos externos de conectividade) considerando suas limitações e vantagens de custo. No software, a \textit{stack} tecnológica será delimitada com foco na comunicação eficiente entre os microcontroladores e a interface gráfica baseada em web (alojada, por exemplo, em um Raspberry Pi atuando como servidor/banco de dados central).
 
-\textbf{2. Desenvolvimento da Arquitetura:} Implementação do \textit{firmware} responsável por realizar a coleta nos nós experimentais e enviar a telemetria, e implementação do sistema centralizado para persistência e visualização da interface gráfica pelo usuário final.
+\textbf{2. Desenvolvimento da Arquitetura:} Implementação do \textit{firmware} responsável por realizar a coleta nos nós experimentais e enviar a telemetria; em paralelo, ocorrerá a implementação do sistema centralizado para persistência e visualização dos resultados na interface gráfica.
 
-\textbf{3. Montagem da Prova de Conceito (Experimento):} Visando mitigar distorções causadas por conversores analógico-digitais (ADCs) de baixo desempenho comuns em placas acessíveis, o experimento de prova de conceito dará preferência à avaliação de fenômenos que se apoiem em leitura de sinais digitais e transições de tempo lógico (como medições com sensores ultrassônicos ou fotoportas em experimentos de Cinemática, como Queda Livre ou Pêndulo Simples), que foram citados e podem ser embasados por revisao sistematica realizada anteriormente. A definição exata ocorrerá no ciclo de projeto.
+\textbf{3. Montagem da Prova de Conceito (Experimento):} Visando facilitar a adoção e a montagem pelo corpo docente, a Prova de Conceito dará prioridade a arranjos de fácil execução e com forte base pedagógica (suportados pelos resultados da revisão sistemática). Como prioridade, utilizar-se-á o experimento de Eletromagnetismo (Circuitos) de \textbf{Carga e Descarga de Capacitor}. Secundariamente, havendo necessidade, poderão ser testados ensaios de Cinemática, como a \textbf{Queda Livre}. A definição exata será consolidada durante o ciclo de projeto.
 
-\textbf{4. Validação e Coleta de Dados:} O foco primário da validação será quantitativo, observando dois aspectos:
+\textbf{4. Validação e Coleta de Dados:} O foco primário da validação observará dois aspectos práticos:
 \begin{itemize}
-    \item \textit{Desempenho da Aquisição:} Aferição da densidade de leituras (taxa de amostragem sustentada) no servidor central para garantir que a taxa de transmissão da placa seja o suficiente para representar o fenômeno físico contínuo. Análises profundas de protocolo de rede não farão parte do escopo de validação. Analise sera mediada por comparacao com solucoes existentes, sejam elas apresentadas em trabalhos anteriores ou identificadas em experimentacao em laboratorio durante o processo de desenvolvimento.
-    \item \textit{Precisão da Medida Física:} Comparativo do resultado inferido (ex: aceleração local da gravidade ou período de oscilação) com os valores teóricos esperados ou aferidos por instrumentos pré-existentes.
+    \item \textit{Custo da Arquitetura:} A análise será mediada por uma comparação sistemática do custo total de aquisição entre a solução proposta e as abordagens comerciais existentes, bem como aquelas levantadas durante a revisão da literatura.
+    \item \textit{Validação da Experiência de Usuário e Pedagógica:} Avaliação qualitativa focada na facilidade de montagem do experimento e na interação do usuário final (alunos e professores) com o sistema desenvolvido.
 \end{itemize}
 
 % ---------------------------------------------------
@@ -169,7 +169,7 @@ Definição da plataforma de HW e experimento & $\bullet$ & & & & & \\
 Desenvolvimento do Firmware (Nós sensores) & $\bullet$ & $\bullet$ & & & & \\
 Desenvolvimento da Aplicação Web e BD      & & $\bullet$ & $\bullet$ & & & \\
 Montagem e integração da Prova de Conceito & & & $\bullet$ & $\bullet$ & & \\
-Testes de densidade de leitura e validação & & & & $\bullet$ & & \\
+Testes finais de comportamento do sistema e validação & & & & $\bullet$ & & \\
 Análise e consolidação dos resultados      & & & & $\bullet$ & $\bullet$ & \\
 Redação final da monografia                & & & & & $\bullet$ & $\bullet$ \\
 Defesa do Trabalho de Conclusão de Curso   & & & & & & $\bullet$ \\
