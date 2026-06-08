@@ -1,0 +1,25 @@
+digraph G {
+    rankdir=LR;
+    node [shape=box, style=filled, fillcolor=lightblue, fontname="Arial"];
+
+    subgraph cluster_0 {
+        label = "Bancadas de Experimento";
+        style=dashed;
+        node1 [label="Nó Sensor 1\n(ESP32)", fillcolor=lightyellow];
+        node2 [label="Nó Sensor 2\n(ESP32)", fillcolor=lightyellow];
+        nodeN [label="Nó Sensor N\n(ESP32)", fillcolor=lightyellow];
+    }
+
+    server [label="Servidor Central\n(Raspberry Pi)", fillcolor=lightgreen];
+    db [label="Banco de Dados", shape=cylinder, fillcolor=lightgray];
+    web [label="Aplicação Web\n(Dashboard)", fillcolor=lightgreen];
+    user [label="Professor/Aluno\n(Navegador)", shape=ellipse, fillcolor=orange];
+
+    node1 -> server [label="Wi-Fi (MQTT/HTTP)"];
+    node2 -> server [label="Wi-Fi (MQTT/HTTP)"];
+    nodeN -> server [label="Wi-Fi (MQTT/HTTP)"];
+
+    server -> db;
+    server -> web;
+    web -> user [label="Acesso Local/Remoto"];
+}
