@@ -36,7 +36,6 @@ Construir e avaliar um sistema de aquisição e monitoramento centralizado para 
 
 # Arquitetura do Sistema
 
-## Diagrama da Solução
 ![Arquitetura do Sistema](arquitetura.png){width=80%}
 
 # Hardware
