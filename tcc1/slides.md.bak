@@ -1,5 +1,5 @@
 ---
-title: "Arquitetura de Baixo Custo para Monitoramento de Experimentos de Física"
+title: "Arquitetura em Sistemas Embarcados de Baixo Custo para Monitoramento de Experimentos Didaticos de Física"
 author: "Victor Hugo Bitencourt"
 date: "8 de Junho, 2026"
 institute: "Universidade do Estado da Bahia (UNEB)"
@@ -15,13 +15,9 @@ header-includes:
 ## O Problema
 - Laboratórios de Física dependem de sistemas proprietários (DAQ).
 - **Alto custo** de aquisição e manutenção.
-- Uso de smartphones gera distrações e falta de padronização.
 - Sistemas isolados dificultam o acompanhamento docente de múltiplos grupos.
 
-## A Solução Proposta
-- Uso de microcontroladores de baixo custo (como ESP32 ou Arduino UNO).
-- Comunicação sem fio (Wi-Fi) para centralização de dados em um servidor de baixo custo (como Raspberry Pi).
-- Interface web amigável para monitoramento em tempo real.
+## Questao de Pesquisa
 
 # Objetivos
 
@@ -29,9 +25,14 @@ header-includes:
 Construir e avaliar um sistema de aquisição e monitoramento centralizado para múltiplos experimentos didáticos via rede sem fio.
 
 ## Objetivos Específicos
-- Avaliar plataformas de hardware (Custo x Benefício atraves de uma tabela comparativa).
+- Avaliar plataformas de hardware (Custo x Benefício através de uma tabela comparativa).
 - Projetar a arquitetura de software (Firmware + Servidor Web).
 - Implementar uma Prova de Conceito (Carga e Descarga de Capacitor).
+
+## Intervencao Proposta
+- Uso de microcontroladores de baixo custo (como ESP32 ou Arduino UNO).
+- Comunicação sem fio (Wi-Fi) para centralização de dados em um servidor de baixo custo (como Raspberry Pi).
+- Interface web amigável para monitoramento em tempo real.
 
 # Arquitetura do Sistema
 
@@ -56,22 +57,22 @@ Construir e avaliar um sistema de aquisição e monitoramento centralizado para 
 ## Abordagem
 - **Natureza:** Pesquisa Aplicada e Experimental.
 - **Objetivo:** Exploratório e Desenvolvimento Tecnológico.
+- **Etapas:**
+    1. **Especificação:** Escolha final dos componentes.
+    2. **Modulo Firmware:** Coleta de dados analógicos e transmissão.
+    3. **Modulo Web** Painel de controle e persistência.
+
+# Desenvolvimento
+
 - **Stack Tecnológica:**
     - **Nós:** ESP32 ou Arduino UNO (C++, Arduino framework).
     - **Servidor:** Raspberry Pi (Python + Banco de Dados PostgreSQL).
     - **Comunicação:** Wi-Fi (comunicação via protocolo HTTP).
 
-# Desenvolvimento
-
-## Etapas do TCC II
-1. **Especificação:** Escolha final dos componentes.
-2. **Modulo Firmware:** Coleta de dados analógicos e transmissão.
-3. **Modulo Web** Painel de controle e persistência.
-
-# Validação e Resultados Esperados
+# Avaliacao e Resultados Esperados
 
 ## Métricas de Sucesso
-- **Custo:** Comparação direta com equipamentos comerciais (Vernier, Pasco).
+- **Custo:** Comparação direta com equipamentos comerciais (ex: Vernier, Pasco).
 - **Escalabilidade:** Capacidade de monitorar 10+ bancadas simultaneamente.
 
 # Cronograma
