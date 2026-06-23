@@ -19,6 +19,8 @@ header-includes:
 
 ## Questão de Pesquisa
 
+- Como desenvolver e avaliar uma arquitetura de baixo custo, baseada em comunicação sem fio, voltada para o âmbito educacional, para a aquisição e monitoramento centralizado de experimentos em laboratórios de Física?
+
 # Objetivos
 
 ## Objetivo Geral
