@@ -7,31 +7,27 @@
 % ----------------------------------------------------------
 
 \section{Introdução}
-O ensino experimental de Física em instituições públicas brasileiras enfrenta barreiras de escalabilidade devido ao alto custo de sistemas proprietários de aquisição de dados (DAQ). Embora o uso de smartphones pessoais tenha sido explorado, ele introduz falta de padronização e distrações no ambiente de aula. Este trabalho propõe uma arquitetura baseada em Microcontroladores (ESP32, Arduino) e Raspberry Pi que utiliza redes sem fio para centralizar a coleta de dados, permitindo que o docente gerencie múltiplas bancadas simultaneamente sem a necessidade de um computador dedicado por experimento.
+O ensino experimental de Física em instituições públicas brasileiras enfrenta barreiras de escalabilidade devido ao alto custo de sistemas proprietários de aquisição de dados (DAQ). Embora o uso de smartphones pessoais tenha sido explorado, ele introduz falta de padronização mínima de instrumentação e distrações no ambiente de aula. Este trabalho propõe uma arquitetura baseada em Microcontroladores (exemplo: ESP32, Arduino) e Raspberry Pi que utiliza redes sem fio para centralizar a coleta de dados, permitindo que o docente gerencie múltiplas bancadas simultaneamente sem a necessidade de um computador dedicado por experimento.
 
 \subsection{Contextualização do Tema}
-A introdução deve começar apresentando o tema geral do seu trabalho. Aqui, você deve situar o leitor no contexto da sua pesquisa, mostrando a importância do tema em um cenário mais amplo. Use dados, informações atualizadas ou citações de autores para embasar o contexto.
-\begin{itemize}
-    \item Dica: Comece com uma frase impactante, uma estatística relevante ou um dado histórico que chame a atenção do leitor.
-    \item Pergunta-chave: Qual é o tema geral do trabalho e por que ele é relevante?
-\end{itemize}
-\subsubsection*{Exemplo:}
-“As mudanças climáticas têm sido consideradas um dos maiores desafios do século XXI, com impactos significativos sobre a saúde pública e os ecossistemas. No Brasil, esses impactos são ainda mais preocupantes devido à alta incidência de doenças transmitidas por vetores, como o Aedes aegypti.”
+
+As atividades experimentais desempenham papel fundamental no ensino de Física, permitindo que conceitos teóricos sejam observados e analisados por meio da coleta e interpretação de dados. Entretanto, a implementação e manutenção de laboratórios didáticos frequentemente dependem de equipamentos de aquisição de dados especializados, cujo custo pode limitar sua adoção em instituições de ensino com recursos reduzidos.
+
+Nos últimos anos, o avanço de plataformas de hardware de baixo custo, como microcontroladores e computadores de placa única, ampliou significativamente as possibilidades de instrumentação científica acessível. Dispositivos como ESP32, Arduino e Raspberry Pi oferecem recursos de processamento, conectividade e integração com sensores a um custo consideravelmente inferior ao de sistemas proprietários tradicionalmente utilizados em laboratórios de ensino.
+
+Paralelamente, a popularização das redes sem fio e das tecnologias associadas à Internet das Coisas (IoT) possibilitou a construção de sistemas distribuídos capazes de coletar, transmitir e armazenar dados experimentais em tempo real. Esse cenário cria oportunidades para o desenvolvimento de laboratórios mais flexíveis, escaláveis e acessíveis, nos quais múltiplos experimentos podem ser monitorados de forma centralizada por meio de interfaces web.
+
+Nesse contexto, surge a necessidade de investigar arquiteturas que permitam integrar experimentos didáticos a infraestruturas computacionais de baixo custo, reduzindo a dependência de computadores dedicados em cada bancada e favorecendo o compartilhamento dos dados coletados. O presente trabalho insere-se nesse cenário ao propor uma arquitetura baseada em comunicação sem fio para aquisição e monitoramento centralizado de dados experimentais em laboratórios de Física.
+
 
 \subsection{Apresentação e Delimitação do Problema}
-O problema central é a ociosidade e o isolamento do hardware em laboratórios didáticos. A pergunta de pesquisa foca na viabilidade técnica: Como construir uma infraestrutura de baixo custo e baseada em Wi-Fi que permita a centralização de dados experimentais em uma interface web única para fins pedagógicos?.
+O problema central deste trabalho é a baixa integração entre equipamentos experimentais em laboratórios didáticos, o que resulta na ociosidade de recursos computacionais, dificuldades de gerenciamento e limitações na visualização conjunta dos dados coletados. Diante desse cenário, surge a seguinte questão de pesquisa: como construir uma infraestrutura de baixo custo, baseada em comunicação Wi-Fi, que permita a centralização e o monitoramento de dados experimentais em uma interface web única para fins educacionais?
 
 \section{Justificativa e Contribuições}
-A literatura demonstra que laboratórios integrados aumentam a autonomia e o engajamento, mas a complexidade da infraestrutura ainda é um obstáculo. A contribuição deste trabalho é democratizar o acesso à instrumentação científica através de uma solução que reduz a dependência de cabos e minimiza a ociosidade de hardware.
+A crescente disponibilidade de plataformas embarcadas de baixo custo cria oportunidades para modernizar laboratórios didáticos sem a necessidade de investimentos elevados em equipamentos especializados. Ao propor uma arquitetura centralizada para aquisição e monitoramento de dados experimentais, este trabalho busca contribuir para a democratização do acesso à instrumentação científica, reduzindo custos de implantação, simplificando a infraestrutura necessária e ampliando as possibilidades de utilização dos experimentos em contextos educacionais.
 
 \subsection{Pergunta de Pesquisa}
-Formule a pergunta central que guia o seu estudo. A pergunta deve ser clara, objetiva e estar diretamente relacionada ao problema apresentado.
-\begin{itemize}
-    \item Dica: A pergunta deve ser respondida pelos objetivos do trabalho.
-    \item Pergunta-chave: Qual é a questão principal que a pesquisa pretende responder?
-\end{itemize}
-\subsubsection*{Exemplo:}
-“Como modelos de aprendizado de máquina podem ser aplicados para prever a distribuição do Aedes aegypti em regiões afetadas por mudanças climáticas?”
+“Como desenvolver e avaliar uma arquitetura de baixo custo, baseada em comunicação sem fio, focada na usabilidade educacional para a aquisição e monitoramento centralizado de experimentos em laboratórios de Física?”
 
 \section{Objetivos}
 
