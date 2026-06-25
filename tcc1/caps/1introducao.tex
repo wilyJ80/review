@@ -7,7 +7,7 @@
 % ----------------------------------------------------------
 
 \section{Introdução}
-O ensino experimental de Física em instituições públicas brasileiras enfrenta barreiras de escalabilidade devido ao alto custo de sistemas proprietários de aquisição de dados (DAQ). Embora o uso de smartphones pessoais tenha sido explorado, ele introduz falta de padronização mínima de instrumentação e distrações no ambiente de aula. Este trabalho propõe uma arquitetura baseada em Microcontroladores (exemplo: ESP32, Arduino) e Raspberry Pi que utiliza redes sem fio para centralizar a coleta de dados, permitindo que o docente gerencie múltiplas bancadas simultaneamente sem a necessidade de um computador dedicado por experimento.
+O ensino experimental de Física enfrenta um dilema de infraestrutura: de um lado, sistemas comerciais de aquisição de dados (DAQ) de alto custo; de outro, o uso de ferramentas não padronizadas (como smartphones pessoais) que podem dispersar a atenção pedagógica. Este trabalho propõe uma terceira via através de uma arquitetura centralizada baseada em IoT (ESP32 e Raspberry Pi), que utiliza redes sem fio para integrar múltiplas bancadas experimentais em um único ponto de controle e visualização.
 
 \subsection{Contextualização do Tema}
 
@@ -21,10 +21,10 @@ Nesse contexto, surge a necessidade de investigar arquiteturas que permitam inte
 
 
 \subsection{Apresentação e Delimitação do Problema}
-O problema central deste trabalho é a baixa integração entre equipamentos experimentais em laboratórios didáticos, o que resulta na ociosidade de recursos computacionais, dificuldades de gerenciamento e limitações na visualização conjunta dos dados coletados. Diante desse cenário, surge a seguinte questão de pesquisa: como construir uma infraestrutura de baixo custo, baseada em comunicação Wi-Fi, que permita a centralização e o monitoramento de dados experimentais em uma interface web única para fins educacionais?
+O problema técnico-pedagógico reside no isolamento das bancadas, que frequentemente operam com hardware ocioso e exigem computadores dedicados por experimento.
 
 \section{Justificativa e Contribuições}
-A crescente disponibilidade de plataformas embarcadas de baixo custo cria oportunidades para modernizar laboratórios didáticos sem a necessidade de investimentos elevados em equipamentos especializados. Ao propor uma arquitetura centralizada para aquisição e monitoramento de dados experimentais, este trabalho busca contribuir para a democratização do acesso à instrumentação científica, reduzindo custos de implantação, simplificando a infraestrutura necessária e ampliando as possibilidades de utilização dos experimentos em contextos educacionais.
+A contribuição deste trabalho é superior à simples instrumentação, pois foca na concepção de uma infraestrutura escalável. Enquanto trabalhos anteriores focam em sensores isolados, esta proposta apresenta uma solução de rede que permite ao docente monitorar todo o laboratório simultaneamente. Isso democratiza o acesso à instrumentação científica e serve de alicerce para a modernização de laboratórios públicos.
 
 \subsection{Pergunta de Pesquisa}
 “Como desenvolver e avaliar uma arquitetura de baixo custo, baseada em comunicação sem fio, focada na usabilidade educacional para a aquisição e monitoramento centralizado de experimentos em laboratórios de Física?”
@@ -38,7 +38,6 @@ Construir e apresentar um sistema de monitoramento centralizado para experimento
 \section{Objetivos Específicos}
 
 \begin{enumerate}
-    \item Avaliar plataformas de hardware quanto ao custo para integração em experimentos didáticos de Física.
     \item Desenvolver a arquitetura de software (Firmware e Servidor Central) para telemetria via HTTP.
     \item Implementar uma Prova de Conceito (PoC) com o experimento de Carga e Descarga de Capacitor.
     \item Demonstrar a funcionalidade do sistema através da coleta de dados em tempo real.
