@@ -17,8 +17,8 @@ A análise é conduzida de forma \textbf{quantitativa}, focada no processamento 
 
 \subsection{Ferramentas Utilizadas}  
 \begin{itemize}
-    \item \textbf{Hardware:} Microcontroladores ESP32 (nós sensores), Raspberry Pi (servidor central) e componentes do circuito RC.
-    \item \textbf{Software e Protocolos:} Linguagem C++ (Arduino Framework), Python ou Node.js para o backend, e protocolo HTTP para comunicação Wi-Fi.
+    \item \textbf{Hardware:} Microcontroladores ESP32 ou Arduino (nós sensores), Raspberry Pi (servidor central) e componentes do circuito RC.
+    \item \textbf{Software e Protocolos:} Linguagem C++ (Arduino Framework), Python para o backend, e protocolo HTTP para comunicação Wi-Fi.
 \end{itemize}
 
 \section{Metodologia Utilizando Design Science Research (DSR)}
@@ -26,7 +26,7 @@ A análise é conduzida de forma \textbf{quantitativa}, focada no processamento 
 A aplicação da DSR organiza o trabalho nas seguintes etapas fundamentais \cite{hevner}:
 
 \subsection{Identificação do Problema e Requisitos do Artefato}
-O problema reside na fragmentação laboratorial e no alto custo de manutenção de sistemas que exigem computadores individuais por bancada. O foco é superar a necessidade de conexões físicas por USB. Os requisitos incluem: coleta de dados analógicos via ESP32; transmissão sem fio; e visualização centralizada em Dashboard Web.
+O problema reside na fragmentação laboratorial e no alto custo de manutenção de sistemas que exigem computadores individuais por bancada. O foco é superar a necessidade de conexões físicas por USB. Os requisitos incluem: coleta de dados analógicos via ESP32 ou Arduino; transmissão sem fio; e visualização centralizada em Dashboard Web.
 
 \subsection{Desenvolvimento do Artefato (Arquitetura)}
 O artefato consiste em uma infraestrutura orquestrada composta por:
@@ -45,4 +45,4 @@ A demonstração será realizada através de uma \textbf{Prova de Conceito (PoC)
 \end{itemize}
 
 \subsection{Avaliação e Comunicação}
-A avaliação do artefato é estritamente funcional, aferindo se a arquitetura cumpre o papel de centralizar a coleta de dados de forma estável e escalável. Os resultados serão documentados nesta monografia e comunicados em defesa pública perante banca examinadora.
+A avaliação do artefato é de caráter funcional, aferindo se a arquitetura cumpre o papel de centralizar a coleta de dados de forma estável e escalável. Os resultados serão documentados nesta monografia e comunicados em defesa pública perante banca examinadora.
