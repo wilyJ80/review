@@ -1,20 +1,48 @@
 \chapter{Metodologia}
-A pesquisa é focada na criação de um artefato tecnológico útil para resolver o problema da fragmentação laboratorial.
 
-\section{Identificação do Problema e Requisitos do Artefato}
-O foco é superar a necessidade de conexões físicas por USB e computadores individuais. Os requisitos incluem: Coleta de dados analógicos via ESP32; Transmissão sem fio; Visualização centralizada em Dashboard Web.
+A metodologia deste trabalho é estruturada para descrever os processos técnicos e científicos adotados para a criação de uma infraestrutura de monitoramento centralizado. A pesquisa utiliza a abordagem da \textbf{Design Science Research (DSR)}, voltada para o desenvolvimento e avaliação de artefatos tecnológicos que resolvam problemas práticos de Sistemas de Informação \cite{hevner}.
 
-\section{Desenvolvimento do Artefato (Arquitetura)}
+\section{Metodologia Tradicional}
+
+Para fins de classificação acadêmica, esta pesquisa define-se conforme os critérios a seguir:
+
+\subsection{Tipo de Pesquisa}  
+Quanto à sua natureza, trata-se de uma \textbf{pesquisa aplicada}, pois busca resolver o problema prático do isolamento de hardware em laboratórios de ensino. Quanto aos objetivos, classifica-se como \textbf{exploratória} e de \textbf{desenvolvimento tecnológico}. Proceduralmente, configura-se como uma \textbf{pesquisa experimental}, visto que envolve a construção e o teste funcional de um protótipo físico.
+
+\subsection{Fontes e Coleta de Dados}  
+A pesquisa utiliza \textbf{dados secundários}, obtidos por meio de uma revisão sistemática da literatura em bases científicas, e \textbf{dados primários}, coletados experimentalmente por meio dos nós sensores (ESP32) durante o experimento de carga e descarga do capacitor.
+
+\subsection{Análise dos Dados}  
+A análise é conduzida de forma \textbf{quantitativa}, focada no processamento dos sinais analógicos e na telemetria recebida, e \textbf{qualitativa}, por meio da avaliação técnica do design da arquitetura e da eficácia da orquestração dos dados sem fio.
+
+\subsection{Ferramentas Utilizadas}  
 \begin{itemize}
-	\item \textbf{Camada de Borda:} Microcontroladores ESP32 coletando dados de tensão do circuito RC.
-	\item \textbf{Camada de Servidor:} Raspberry Pi atuando como servidor central para recepção e persistência dos dados.
-	\item \textbf{Interface de Monitoramento:} Dashboard Web desenvolvido para visualização em tempo real \cite{silva}.
+    \item \textbf{Hardware:} Microcontroladores ESP32 (nós sensores), Raspberry Pi (servidor central) e componentes do circuito RC.
+    \item \textbf{Software e Protocolos:} Linguagem C++ (Arduino Framework), Python ou Node.js para o backend, e protocolo HTTP para comunicação Wi-Fi.
 \end{itemize}
 
-\section{Demonstração Funcional (PoC)}
-A demonstração focará na viabilidade técnica da orquestração:
+\section{Metodologia Utilizando Design Science Research (DSR)}
+
+A aplicação da DSR organiza o trabalho nas seguintes etapas fundamentais \cite{hevner}:
+
+\subsection{Identificação do Problema e Requisitos do Artefato}
+O problema reside na fragmentação laboratorial e no alto custo de manutenção de sistemas que exigem computadores individuais por bancada. O foco é superar a necessidade de conexões físicas por USB. Os requisitos incluem: coleta de dados analógicos via ESP32; transmissão sem fio; e visualização centralizada em Dashboard Web.
+
+\subsection{Desenvolvimento do Artefato (Arquitetura)}
+O artefato consiste em uma infraestrutura orquestrada composta por:
 \begin{itemize}
-	\item \textbf{Sincronização de Telemetria:} Demonstração da capacidade da arquitetura em receber dados de múltiplos nós (ESP32) simultaneamente.
-	\item \textbf{Fidelidade do Fenômeno:} Coleta da curva de descarga do capacitor e sua exibição correta na interface web.
-	\item \textbf{Persistência de Dados:} Verificação da integridade dos dados armazenados no banco de dados para consulta posterior.
+	\item \textbf{Camada de Borda:} Microcontroladores ESP32 coletando dados de tensão do circuito RC em tempo real.
+	\item \textbf{Camada de Servidor:} Raspberry Pi atuando como servidor central para recepção, processamento e persistência dos dados em banco de dados.
+	\item \textbf{Interface de Monitoramento:} Dashboard Web desenvolvido para visualização docente e discente \cite{silva}.
 \end{itemize}
+
+\subsection{Demonstração Funcional (PoC)}
+A demonstração será realizada através de uma \textbf{Prova de Conceito (PoC)} baseada no experimento de Carga e Descarga de Capacitor. A demonstração focará na viabilidade técnica da orquestração:
+\begin{itemize}
+	\item \textbf{Sincronização de Telemetria:} Demonstração da capacidade da arquitetura em receber e processar dados de nós microcontroladores via rede sem fio.
+	\item \textbf{Fidelidade do Fenômeno:} Coleta da curva de descarga do capacitor e sua correta representação gráfica na interface web.
+	\item \textbf{Persistência de Dados:} Verificação da integridade dos registros armazenados no banco de dados para consultas e análises pedagógicas posteriores.
+\end{itemize}
+
+\subsection{Avaliação e Comunicação}
+A avaliação do artefato é estritamente funcional, aferindo se a arquitetura cumpre o papel de centralizar a coleta de dados de forma estável e escalável. Os resultados serão documentados nesta monografia e comunicados em defesa pública perante banca examinadora.
