@@ -7,113 +7,43 @@
 % ----------------------------------------------------------
 
 \section{Introdução}
-A introdução é uma das partes mais importantes de seu trabalho, pois tem a função de apresentar o tema, contextualizar o problema e direcionar o leitor para os objetivos do estudo. Uma boa introdução deve ser clara, objetiva e instigante, despertando o interesse do leitor. A seguir, descrevo o passo a passo para construir uma introdução estruturada e coesa.
+O ensino de ciências, e em particular o de Física, é historicamente pautado no equilíbrio entre a formalização matemática e a experimentação prática \cite{optics}. A atividade experimental não é apenas um complemento à teoria; ela funciona como um ambiente didático que permite ao estudante manipular variáveis, confrontar modelos ideais com ruídos do mundo real e reestruturar seus esquemas mentais \cite{raviola}. No entanto, a implementação eficaz de laboratórios didáticos enfrenta barreiras estruturais severas, especialmente em instituições públicas, onde o alto custo de aquisição e manutenção de sistemas proprietários de Aquisição de Dados (DAQ) limita a modernização e a escalabilidade das práticas. 
+
+A evolução das Tecnologias Digitais de Informação e Comunicação (TDIC) trouxe novas possibilidades, como os Laboratórios de Acesso Remoto (LAR) e as experiências híbridas, que utilizam aparatos reais controlados via rede e internet \cite{lms}. Esse movimento ganhou urgência sem precedentes com a pandemia de COVID-19, que forçou instituições ao redor do mundo a reinventar seus métodos de ensino para garantir a segurança de alunos e docentes sem comprometer os resultados de aprendizagem \cite{create, transforming}. A arquitetura proposta neste trabalho insere-se nessa fronteira tecnológica, buscando não apenas medir fenômenos físicos, mas prover uma infraestrutura orquestrada que suporte a transição do laboratório isolado para um ambiente conectado e centralizado.
 
 \subsection{Contextualização do Tema}
-A introdução deve começar apresentando o tema geral do seu trabalho. Aqui, você deve situar o leitor no contexto da sua pesquisa, mostrando a importância do tema em um cenário mais amplo. Use dados, informações atualizadas ou citações de autores para embasar o contexto.
-\begin{itemize}
-    \item Dica: Comece com uma frase impactante, uma estatística relevante ou um dado histórico que chame a atenção do leitor.
-    \item Pergunta-chave: Qual é o tema geral do trabalho e por que ele é relevante?
-\end{itemize}
-\subsubsection*{Exemplo:}
-“As mudanças climáticas têm sido consideradas um dos maiores desafios do século XXI, com impactos significativos sobre a saúde pública e os ecossistemas. No Brasil, esses impactos são ainda mais preocupantes devido à alta incidência de doenças transmitidas por vetores, como o Aedes aegypti.”
+A literatura atual destaca que a eficácia pedagógica de um laboratório está intrinsecamente ligada à capacidade do aluno de agir como um cientista: formulando hipóteses e coletando dados primários em ambientes reais, em vez de apenas observar simulações virtuais que simplificam a complexidade da natureza. Para viabilizar essa prática em larga escala, surgiram abordagens baseadas em hardware de código aberto, como Arduino e ESP32, que democratizaram o acesso à instrumentação científica ao reduzir custos de implementação em relação aos kits comerciais da Pasco ou Vernier.
+
+No cenário da instrumentação científica educacional, o mercado global é amplamente dominado por ecossistemas proprietários de empresas como Pasco Scientific, Vernier (LabQuest) e TeachSpin \cite{kraftmakher}, com forte representação de equipamentos DAQ (\textit{Data Acquisition Systems}). Embora essas soluções ofereçam alta precisão e recursos avançados de processamento, sua adoção em larga escala esbarra em barreiras financeiras e arquiteturais intransponíveis para a maioria das instituições públicas de países em desenvolvimento \cite{vidal}. Estima-se que sistemas comerciais completos para experimentos específicos possam ultrapassar o custo de milhares de dólares por bancada \cite{mishonov}, um valor proibitivo que acentua a desigualdade no acesso à experimentação de qualidade. Além do alto investimento, tais sistemas são frequentemente projetados como unidades isoladas que exigem um computador dedicado por experimento para a visualização dos dados via conexão física (USB), resultando em uma infraestrutura rígida e com alto índice de ociosidade de hardware durante os períodos de discussão teórica. Esta configuração impede que o laboratório seja gerenciado como uma rede integrada, dificultando a supervisão docente e a transição para modelos de ensino mais modernos e dinâmicos.
+
+Entretanto, a simples substituição de DAQs caros por microcontroladores não resolve o problema de gerenciamento do ambiente laboratorial. Frequentemente, essas soluções operam de forma fragmentada: cada bancada exige um computador dedicado para a visualização dos dados via cabo USB, ou depende de smartphones pessoais dos alunos. Embora o uso de smartphones (BYOD - \textit{Bring Your Own Device}) ofereça portabilidade, ele introduz desafios: a falta de uma rede de dados integrada impede que o docente monitore simultaneamente o progresso de múltiplos grupos, sobrecarregando a gestão da aula e dificultando intervenções em tempo real.
+
+A tendência mais recente na instrumentação educacional foca no desenvolvimento de frameworks escaláveis, como o FREE (\textit{Framework for Remote Experiments in Education}), que defendem a separação entre a interface de usuário (UI) e o controle do aparato físico via protocolos web modernos. Essa abordagem permite que o laboratório funcione de forma autônoma, onde múltiplos nós sensores (IoT) transmitem telemetria sem fio para um ponto central de persistência e visualização.
 
 \subsection{Apresentação e Delimitação do Problema}
-Após a contextualização, você deve delimitar o problema que será estudado. Aqui, especifique qual é o foco da sua pesquisa e quais questões específicas você pretende abordar. Evite ser muito vago ou genérico.
-\begin{itemize}
-    \item Dica: Deixe claro qual recorte você adotará (temporal, espacial, conceitual ou temático).
-    \item Pergunta-chave: Qual é o problema específico que sua pesquisa busca resolver ou investigar?
-\end{itemize}
-\subsubsection*{Exemplo:}
-“Embora existam métodos tradicionais de monitoramento de vetores, ainda há uma lacuna na aplicação de modelos computacionais que utilizem aprendizado de máquina para prever a distribuição desses vetores em função das mudanças climáticas?”
+O problema central identificado é o isolamento arquitetural das bancadas experimentais e a consequente ociosidade de hardware. Em uma configuração tradicional, o hardware de coleta permanece inativo durante os longos períodos destinados à discussão teórica e montagem, e sua dependência de conexões físicas individuais impede a integração dos dados. Este cenário gera uma lacuna tecnológica: como equilibrar a economia de recursos de sistemas de baixo custo com a robustez técnica necessária para uma orquestração centralizada?
+
+A delimitação deste trabalho foca no desenvolvimento de uma infraestrutura IoT escalável, baseada em microcontroladores ESP32 e um servidor Raspberry Pi, que utiliza o protocolo Wi-Fi para eliminar o emaranhado de cabos e centralizar a coleta de dados de múltiplos experimentos. O escopo abrange a demonstração técnica da arquitetura através de uma Prova de Conceito (PoC) com o experimento de Carga e Descarga de Capacitor, por meio do desenvolvimento tecnológico, focando em proporcionar a viabilidade da orquestração dos dados e trazer o diferencial da telemetria sem fio.
 
 \section{Justificativa e Contribuições}
-Explique por que este estudo é importante. A justificativa deve convencer o leitor da relevância da sua pesquisa, destacando os benefícios e a contribuição que o trabalho pode trazer para a área científica, social, econômica ou tecnológica.
-\begin{itemize}
-    \item Dica: Relacione a importância do seu estudo com as lacunas existentes na literatura ou com problemas práticos atuais.
-    \item Pergunta-chave: Por que esse estudo é importante? Quem ou o que será beneficiado com os resultados?
-\end{itemize}
-\subsubsection*{Exemplo:}
-“Este estudo é relevante porque a previsão precisa da distribuição de mosquitos pode auxiliar no planejamento de ações preventivas, reduzindo surtos de doenças como dengue e/ou zika. Além disso, a integração de aprendizado de máquina com dados climáticos é uma abordagem inovadora e promissora.”
+A justificativa para este estudo reside na necessidade de fornecer soluções de Sistemas de Informação que apoiem a modernização dos laboratórios de ensino de forma economicamente viável. Diferente de trabalhos que focam apenas no uso de um único sensor, esta pesquisa justifica-se pela criação de uma camada de orquestração, permitindo que o docente gerencie o laboratório como uma rede de dispositivos inteligentes, ccom seus sensores e montagens associadas cada. A relevância tecnológica manifesta-se na proposição de uma arquitetura que reduz drasticamente a necessidade de hardware duplicado (como computadores individuais por bancada), otimizando o investimento institucional e permitindo que o foco pedagógico retorne para a análise dos dados e para a interação professor-aluno.
+
+Do ponto de vista científico, o trabalho contribui para a literatura de experimentação remota e híbrida ao demonstrar como protocolos leves de comunicação sem fio podem ser aplicados para garantir a sincronização de dados experimentais reais \cite{lms}. Ao integrar ferramentas de IoT a interfaces web amigáveis, o projeto serve de alicerce para futuros laboratórios remotos que operam 24 horas por dia, por exemplo, permitindo que o conhecimento físico seja acessado de forma democrática e independente do espaço físico da universidade \cite{termometria}.
 
 \subsection{Pergunta de Pesquisa}
-Formule a pergunta central que guia o seu estudo. A pergunta deve ser clara, objetiva e estar diretamente relacionada ao problema apresentado.
-\begin{itemize}
-    \item Dica: A pergunta deve ser respondida pelos objetivos do trabalho.
-    \item Pergunta-chave: Qual é a questão principal que a pesquisa pretende responder?
-\end{itemize}
-\subsubsection*{Exemplo:}
-“Como modelos de aprendizado de máquina podem ser aplicados para prever a distribuição do Aedes aegypti em regiões afetadas por mudanças climáticas?”
+Diante das limitações de custo, escalabilidade e monitoramento nos laboratórios de Física, este trabalho busca responder: Como projetar e implementar uma infraestrutura de baixo custo, baseada em comunicação sem fio e arquitetura IoT, que permita a centralização, persistência e visualização de telemetria experimental que possibilite múltiplas bancadas em um ambiente educacional?
 
 \section{Objetivos}
-\subsubsection{Estrutura do Objetivo Geral}
-
-O objetivo geral de uma pesquisa deve ser redigido de maneira clara, objetiva e alinhada ao propósito do estudo. Para isso, recomenda-se considerar os seguintes elementos:
-
-\subsubsubsection{Elementos do Objetivo Geral}
-\begin{itemize}
-    \item \textbf{Verbo de Ação:} Comece com um verbo no infinitivo, como \textit{desenvolver}, \textit{analisar}, \textit{avaliar}, \textit{propor} ou \textit{identificar}.
-    \item \textbf{Resultado Principal:} Indique o que será produzido ou investigado na pesquisa.
-    \item \textbf{Propósito:} Explique o impacto ou a aplicação do trabalho de forma ampla.
-\end{itemize}
-
-\subsubsubsection{Exemplo em Diferentes Áreas}
-
-\subsubsection*{Na Área de Tecnologia}
-\begin{quote}
-    Desenvolver um sistema de recomendação utilizando aprendizado de máquina para otimizar a experiência do usuário em plataformas de e-commerce.
-\end{quote}
-
-\subsubsection*{Na Área de Saúde}
-\begin{quote}
-    Identificar fatores ambientais associados ao aumento de casos de arboviroses em regiões tropicais, com foco em estratégias de prevenção.
-\end{quote}
-
-\subsubsection*{Na Área de Educação}
-\begin{quote}
-    Avaliar o impacto do uso de tecnologias digitais interativas no processo de aprendizagem de estudantes do ensino médio.
-\end{quote}
-
+A definição de objetivos claros é fundamental para delimitar o escopo da pesquisa e estabelecer as metas técnicas que guiarão o desenvolvimento do artefato. Nesta seção, apresentam-se o objetivo geral e os objetivos específicos, estruturados sob a ótica da resolução do problema de isolamento e ociosidade de hardware em laboratórios de Física.
 
 \subsection{Objetivo Geral}
-\begin{quote}
-    Desenvolver e validar uma plataforma baseada em inteligência artificial para monitoramento e predição da disseminação de vetores de doenças infecciosas em ambientes urbanos, visando apoiar ações de vigilância e controle epidemiológico.
-\end{quote}
+Projetar, implementar e demonstrar a funcionalidade de uma arquitetura de monitoramento centralizado baseada em Internet das Coisas (IoT), utilizando microcontroladore ESP32 e um servidor Raspberry Pi via rede Wi-Fi, visando a orquestração e a visualização em tempo real de um experimento didático de Física em um ambiente laboratorial integrado.
+
 \subsection{Objetivos Específicos}
-\section{Objetivos Específicos}
+Os objetivos específicos detalham as etapas técnicas e investigativas necessárias para a concretização da arquitetura proposta.
 
-Os objetivos específicos desdobram o objetivo geral em ações concretas e mensuráveis que guiarão o desenvolvimento da pesquisa. Estes objetivos devem ser claros, objetivos e alinhados ao propósito do estudo.
-
-\subsection{Estrutura dos Objetivos Específicos}
-
-Para redigir objetivos específicos, recomenda-se seguir esta estrutura:
-\begin{itemize}
-    \item \textbf{Verbo de Ação:} Utilize verbos no infinitivo, como \textit{investigar}, \textit{analisar}, \textit{propor}, \textit{desenvolver}, \textit{avaliar} ou \textit{validar}.
-    \item \textbf{Ação ou Meta:} Indique o que será feito em cada etapa da pesquisa.
-    \item \textbf{Foco ou Escopo:} Descreva o contexto ou a área específica onde o objetivo será aplicado.
-\end{itemize}
-
-\subsection{Exemplo de Objetivos Específicos}
-
-Os seguintes exemplos demonstram como os objetivos específicos podem ser estruturados em diferentes áreas:
-
-\subsubsection*{Na Área de Tecnologia}
 \begin{enumerate}
-    \item Desenvolver um algoritmo de aprendizado de máquina capaz de identificar padrões em grandes volumes de dados.
-    \item Validar o desempenho do algoritmo em cenários reais utilizando datasets públicos.
-    \item Propor melhorias na arquitetura do sistema para otimizar sua escalabilidade.
-\end{enumerate}
-
-\subsubsection*{Na Área de Saúde}
-\begin{enumerate}
-    \item Analisar a influência de fatores ambientais na proliferação de vetores de doenças infecciosas.
-    \item Mapear áreas de risco elevado de arboviroses utilizando dados epidemiológicos e geográficos.
-    \item Avaliar a eficácia de estratégias de controle baseadas em vigilância ativa.
-\end{enumerate}
-
-\subsubsection*{Na Área de Educação}
-\begin{enumerate}
-    \item Identificar os principais desafios enfrentados por estudantes no uso de tecnologias digitais.
-    \item Avaliar o impacto de metodologias de ensino híbrido na motivação dos alunos.
-    \item Propor ferramentas digitais que melhorem a interação entre professores e estudantes.
+    \item Implementar uma Prova de Conceito (PoC) utilizando o experimento de Carga e Descarga de Capacitor (Circuito RC), por ser um arranjo de alta relevância didática e facilidade de digitalização, servindo como base para avaliar o funcionamento da telemetria digital, sendo programado o firmware em um microcontrolador ESP32.
+    \item Implementar a camada web em código Python, culminando em um servidor conectado a um banco de dados, com interface gráfica para o usuário final.
+    \item Demonstrar a viabilidade técnica da orquestração de dados, documentando leituras experimentais dispostas na interface web, consolidando o artefato como uma infraestrutura funcional para laboratórios híbridos e remotos.
 \end{enumerate}

@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99e (TeX Live 2026/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: monografia.aux
+A level-1 auxiliary file: ./caps/_lista.aux
+The style file: abntex2-alf.bst.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+Database file #1: abntex2-options.bib
+Database file #2: referencias.bib
+Warning--I didn't find a database entry for "araujo2012"
+Warning--I didn't find a database entry for "kalinke2015"
+Warning--I didn't find a database entry for "sabra1981theories"
+Warning--I didn't find a database entry for "martins2015pesquisas"
+Warning--I didn't find a database entry for "NBR10520:2002"
+Warning--I didn't find a database entry for "NBR14724:2011"
+Warning--I didn't find a database entry for "van86"
+Warning--I didn't find a database entry for "ibge1993"
+Warning--I didn't find a database entry for "NBR6024:2012"
+Warning--I didn't find a database entry for "abntex2cite"
+Warning--I didn't find a database entry for "abntex2cite-alf"
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v<VERSION>           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+You've used 12 entries,
+            6703 wiz_defined-function locations,
+            1277 strings with 11716 characters,
+and the built_in function-call counts, 12205 in all, are:
+= -- 1227
+> -- 362
+< -- 165
++ -- 328
+- -- 105
+* -- 819
+:= -- 1562
+add.period$ -- 32
+call.type$ -- 13
+change.case$ -- 108
+chr.to.int$ -- 34
+cite$ -- 9
+duplicate$ -- 842
+empty$ -- 633
+format.name$ -- 515
+if$ -- 2726
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 191
+newline$ -- 56
+num.names$ -- 45
+pop$ -- 248
+preamble$ -- 1
+purify$ -- 51
+quote$ -- 0
+skip$ -- 1080
+stack$ -- 1
+substring$ -- 442
+swap$ -- 368
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1
+warning$ -- 0
+while$ -- 63
+width$ -- 0
+write$ -- 157
+(There were 11 warnings)
