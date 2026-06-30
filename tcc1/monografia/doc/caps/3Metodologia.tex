@@ -1,2 +1,50 @@
 \chapter{Metodologia}
+A metodologia descreve o percurso técnico e científico percorrido para a concepção e implementação da infraestrutura de monitoramento centralizado. O foco desta seção é detalhar a natureza da pesquisa, as ferramentas de desenvolvimento e a orquestração do hardware e software propostos.
 
+\section{Metodologia Tradicional}
+\subsection{Tipo de Pesquisa}
+Quanto à sua natureza, esta é uma pesquisa aplicada, pois visa a resolução de um problema prático e imediato: o isolamento das bancadas laboratoriais. Quanto aos objetivos, trata-se de uma pesquisa exploratória e de desenvolvimento tecnológico, focada na avaliação de alternativas de hardware e na entrega de um sistema funcional. Proceduralmente, configura-se como uma pesquisa experimental, visto que envolve a construção de um protótipo físico e a realização de testes funcionais para avaliar a telemetria.
+
+\subsection{Fontes e Coleta de Dados}
+Os dados secundários foram levantados por meio de uma revisão sistemática da literatura nas bases IEEE Xplore e European Journal of Physics. Já os dados primários serão gerados de forma experimental através da Prova de Conceito (PoC). A coleta consistirá na captura de sinais analógicos de tensão do circuito RC pelos nós sensores (ESP32) em intervalos de tempo pré-definidos.
+
+\subsection{Análise dos Dados}
+A análise será conduzida de forma quantitativa, focada na fidelidade da digitalização da curva exponencial de carga/descarga. De forma complementar, haverá uma análise qualitativa da viabilidade arquitetural, observando o funcionamento correto da orquestração dos dados via Wi-Fi e a persistência correta no banco de dados centralizado.
+
+\subsection{Ferramentas Utilizadas}
+\begin{enumerate}
+	\item Hardware de Borda: Placa de desenvolvimento ESP32-DevKitC, que possui o módulo ESP-WROOM-32 da Espressif. Dotado de conversores ADC e conectividade Wi-Fi nativa.
+	\item Módulos de eletrônica: protoboard (placa de prototipação), capacitor de 100 microfarads, resistor de 10k ohms, fios jumpers, módulo display OLED SSD1306.
+	\item Hardware de Servidor: Um computador de placa única Raspberry Pi (ex: Raspberry Pi Zero 2W) atuando como servidor central e hospedeiro do banco de dados.
+	\item Ambiente de Desenvolvimento: Framework Arduino (C++) para o firmware no microcontrolador; Python (Quart, adaptação do framework popular Flask com suporte a processamento assíncrono); e HTML/JavaScript para as visualizações dos resultados via página web.
+	\item Protocolos de Comunicação: Dados experimentais sendo transportados da borda para o servidor central via protocolo HTTP em payloads JSON.
+\end{enumerate}
+
+\subsection{Arquitetura do Sistema e Diagramas}
+O projeto adota uma topologia de rede cliente-servidor, onde o nó sensor comunica-se com um coordenador central, permitindo a orquestração do laboratório.
+
+\subsubsection{Diagrama de Arquitetura}
+A arquitetura é dividida em três camadas principais:
+
+\begin{center}
+ \includegraphics[scale=.37]{arquitetura}
+\end{center}
+
+\begin{enumerate}
+	\item Camada de Borda (Edge): Composta pela bancada experimental, onde localiza-se um ESP32 responsável pela leitura física do fenômeno.
+	\item Camada de Servidor (Gateway): O Raspberry Pi recebe as mensagens de telemetria, realiza a persistência no banco de dados e gerencia o tráfego da rede local.
+	\item Camada de Aplicação: O Dashboard Web, acessado via navegador por docentes ou alunos, que consome os dados persistidos para exibição gráfica em tempo real.
+\end{enumerate}
+
+\subsubsection{Montagem Elétrica da Prova de Conceito (Circuito RC)}
+A demonstração funcional será baseada no experimento de carga e descarga de um capacitor, seguindo a montagem padrão da literatura.
+
+\begin{center}
+ \includegraphics[scale=.37]{graphviz}
+\end{center}
+
+\begin{enumerate}
+	\item Circuito Físico: A fonte de alimentação conectada a um resistor (R) e um capacitor (C) em série, controlada por uma chave.
+	\item Monitoramento: O pino de entrada analógica do ESP32 é conectado ao terminal positivo do capacitor para medir a variação de tensão.
+	\item Referência: Todos os componentes do circuito físico e o microcontrolador compartilham o mesmo potencial de referência (terra comum) para garantir a integridade da leitura analógica.
+\end{enumerate}
