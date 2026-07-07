@@ -13,7 +13,23 @@ Por fim, vale enfatizar que a construção do conhecimento físico no laboratór
 \subsection{Evolução das Tecnologias de Laboratório: Do Local ao Remoto}
 A infraestrutura laboratorial voltada ao ensino de ciências passou por transformações profundas nas últimas décadas, impulsionadas pela onipresença das Tecnologias Digitais de Informação e Comunicação (TDIC). Historicamente, o modelo predominante é o do acesso local com recursos reais, no qual estudantes e professores devem estar fisicamente presentes em um espaço comum para manipular aparatos e instrumentos. Contudo, esse modelo enfrenta limitações críticas de escalabilidade e espaço físico. Tais barreiras estruturais frequentemente resultam em laboratórios subequipados ou com hardware ocioso durante a maior parte do tempo letivo.
 
-Para compreender a transição tecnológica, a literatura classifica os ambientes de experimentação em quatro categorias fundamentais: (a) Local access-real resource, o laboratório tradicional; (b) Local access-simulated resource, comum em cursos de computação; (c) Remote access-real resource, onde os experimentos reais são controlados à distância; e (d) Remote access-simulated resource, que abrange simuladores virtuais acessados via web \cite{transforming}. Embora os simuladores virtuais (SV) permitam uma visualização clara de fenômenos, eles operam sob simplificações matemáticas de modelos ideais, o que pode privar o aluno do contato com a incerteza e o ruído inerentes à natureza.
+Para compreender a transição tecnológica, a literatura classifica os ambientes de experimentação em quatro categorias fundamentais: (a) Local access-real resource, o laboratório tradicional; (b) Local access-simulated resource, comum em cursos de computação; (c) Remote access-real resource, onde os experimentos reais são controlados à distância; e (d) Remote access-simulated resource, que abrange simuladores virtuais acessados via web \cite{transforming}. 
+
+\begin{table}[ht]
+\centering
+\caption{Classificação dos ambientes de experimentação laboratorial.}
+\label{tab:classificacao_labs}
+\begin{tabular}{|l|c|c|p{6cm}|}
+\hline
+\textbf{Categoria} & \textbf{Acesso} & \textbf{Recurso} & \textbf{Descrição/Característica} \\ \hline
+Local Real & Local & Físico & Laboratório tradicional: interação presencial com aparato. \\ \hline
+Local Simulado & Local & Virtual & Uso de simuladores computacionais em sala de aula. \\ \hline
+Remoto Real & Remoto & Físico & Aparatos reais controlados via rede/internet. \\ \hline
+Remoto Simulado & Remoto & Virtual & Laboratórios virtuais acessados via plataforma web. \\ \hline
+\end{tabular}
+\end{table}
+
+Embora os simuladores virtuais (SV) permitam uma visualização clara de fenômenos, eles operam sob simplificações matemáticas de modelos ideais, o que pode privar o aluno do contato com a incerteza e o ruído inerentes à natureza.
 
 Neste contexto, os Laboratórios de Acesso Remoto (LAR) ou Remote Controlled Laboratories (RCL) surgiram como uma alternativa superior para a democratização do ensino experimental. Iniciadas de forma mais expressiva na década de 90, as primeiras propostas buscavam permitir que estudantes interagissem com equipamentos caros ou perigosos de qualquer lugar, eliminando barreiras geográficas e temporais \cite{termometria}. Sistemas pioneiros utilizaram arquiteturas baseadas em LabVIEW ou MATLAB Web Server (MWS) para mediar a comunicação entre o cliente e o hardware de coleta no servidor \cite{quadrant}. Essas tecnologias permitiram a criação de interfaces onde o usuário define parâmetros, aciona o experimento e recebe resultados em tempo real via navegador, sem a necessidade de softwares adicionais.
 

@@ -12,13 +12,24 @@ Os dados secundários foram levantados por meio de uma revisão sistemática da 
 A análise será conduzida de forma quantitativa, focada na fidelidade da digitalização da curva exponencial de carga/descarga. De forma complementar, haverá uma análise qualitativa da viabilidade arquitetural, observando o funcionamento correto da orquestração dos dados via Wi-Fi e a persistência correta no banco de dados centralizado.
 
 \subsection{Ferramentas Utilizadas}
-\begin{enumerate}
-	\item Hardware de Borda: Placa de desenvolvimento ESP32-DevKitC, que possui o módulo ESP-WROOM-32 da Espressif. Dotado de conversores ADC e conectividade Wi-Fi nativa.
-	\item Módulos de eletrônica: protoboard (placa de prototipação), capacitor de 100 microfarads, resistor de 10k ohms, fios jumpers, módulo display OLED SSD1306.
-	\item Hardware de Servidor: Um computador de placa única Raspberry Pi (ex: Raspberry Pi Zero 2W) atuando como servidor central e hospedeiro do banco de dados.
-	\item Ambiente de Desenvolvimento: Framework Arduino (C++) para o firmware no microcontrolador; Python (Quart, adaptação do framework popular Flask com suporte a processamento assíncrono); e HTML/JavaScript para as visualizações dos resultados via página web.
-	\item Protocolos de Comunicação: Dados experimentais sendo transportados da borda para o servidor central via protocolo HTTP em payloads JSON.
-\end{enumerate}
+
+Para a viabilização da arquitetura proposta, foram selecionadas ferramentas que permitem a integração entre hardware de baixo custo e protocolos modernos de comunicação. A tabela \ref{tab:ferramentas_poc} detalha os principais componentes e tecnologias empregados nesta Prova de Conceito (PoC).
+
+\begin{table}[ht]
+\centering
+\caption{Principais componentes e tecnologias utilizadas na Prova de Conceito (PoC).}
+\label{tab:ferramentas_poc}
+\begin{tabular}{|l|l|p{6cm}|}
+\hline
+\textbf{Categoria} & \textbf{Ferramenta/Componente} & \textbf{Função} \\ \hline
+\multirow{2}{*}{Hardware Borda} & ESP32-DevKitC & Coleta de dados (ADC) e processamento. \\ \cline{2-3}
+& Módulos de prototipação & Conexão dos componentes (R, C, OLED). \\ \hline
+Hardware Servidor & Raspberry Pi & Coordenador central e servidor de dados. \\ \hline
+\multirow{2}{*}{Desenvolvimento} & Arduino Framework (C++) & Firmware para o microcontrolador. \\ \cline{2-3}
+& Python (Quart) & Backend e lógica do servidor. \\ \hline
+Comunicação & Protocolo HTTP/JSON & Transporte de telemetria da borda ao servidor. \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{Arquitetura do Sistema e Diagramas}
 O projeto adota uma topologia de rede cliente-servidor, onde o nó sensor comunica-se com um coordenador central, permitindo a orquestração do laboratório.
