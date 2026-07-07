@@ -1,30 +1,30 @@
-\backcite {optics}{{5}{1.1}{section.1.1}}
-\backcite {raviola}{{5}{1.1}{section.1.1}}
-\backcite {lms}{{5}{1.1}{section.1.1}}
-\backcite {create, transforming}{{5}{1.1}{section.1.1}}
-\backcite {create, transforming}{{5}{1.1}{section.1.1}}
-\backcite {lms}{{6}{1.2}{section.1.2}}
-\backcite {termometria}{{6}{1.2}{section.1.2}}
-\backcite {blind}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {transforming}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {optics}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {foam}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {smartphone}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {vidal}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {kowalski}{{8}{2.0.1}{subsection.2.0.1}}
-\backcite {taylor}{{9}{2.0.1}{subsection.2.0.1}}
-\backcite {thermoelectric}{{9}{2.0.1}{subsection.2.0.1}}
-\backcite {transforming}{{9}{2.0.2}{subsection.2.0.2}}
-\backcite {termometria}{{9}{2.0.2}{subsection.2.0.2}}
-\backcite {quadrant}{{9}{2.0.2}{subsection.2.0.2}}
+\backcite {optics}{{6}{1.1}{section.1.1}}
+\backcite {raviola}{{6}{1.1}{section.1.1}}
+\backcite {lms}{{6}{1.1}{section.1.1}}
+\backcite {create, transforming}{{6}{1.1}{section.1.1}}
+\backcite {create, transforming}{{6}{1.1}{section.1.1}}
+\backcite {lms}{{7}{1.2}{section.1.2}}
+\backcite {termometria}{{7}{1.2}{section.1.2}}
+\backcite {blind}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {transforming}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {optics}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {foam}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {smartphone}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {vidal}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {kowalski}{{9}{2.0.1}{subsection.2.0.1}}
+\backcite {taylor}{{10}{2.0.1}{subsection.2.0.1}}
+\backcite {thermoelectric}{{10}{2.0.1}{subsection.2.0.1}}
 \backcite {transforming}{{10}{2.0.2}{subsection.2.0.2}}
-\backcite {FREE}{{10}{2.0.2}{subsection.2.0.2}}
-\backcite {inverso}{{10}{2.0.2}{subsection.2.0.2}}
-\backcite {create}{{10}{2.0.2}{subsection.2.0.2}}
-\backcite {nino}{{11}{2.0.3}{subsection.2.0.3}}
-\backcite {esp32}{{11}{2.0.3}{subsection.2.0.3}}
-\backcite {spring}{{12}{2.0.4}{subsection.2.0.4}}
-\backcite {lms}{{12}{2.0.4}{subsection.2.0.4}}
-\backcite {aguilar, gprime}{{12}{2.0.5}{subsection.2.0.5}}
-\backcite {aguilar, gprime}{{12}{2.0.5}{subsection.2.0.5}}
-\backcite {aguilar}{{13}{2.0.5}{subsection.2.0.5}}
+\backcite {termometria}{{10}{2.0.2}{subsection.2.0.2}}
+\backcite {quadrant}{{10}{2.0.2}{subsection.2.0.2}}
+\backcite {transforming}{{11}{2.0.2}{subsection.2.0.2}}
+\backcite {FREE}{{11}{2.0.2}{subsection.2.0.2}}
+\backcite {inverso}{{11}{2.0.2}{subsection.2.0.2}}
+\backcite {create}{{11}{2.0.2}{subsection.2.0.2}}
+\backcite {nino}{{12}{2.0.3}{subsection.2.0.3}}
+\backcite {esp32}{{12}{2.0.3}{subsection.2.0.3}}
+\backcite {spring}{{13}{2.0.4}{subsection.2.0.4}}
+\backcite {lms}{{13}{2.0.4}{subsection.2.0.4}}
+\backcite {aguilar, gprime}{{13}{2.0.5}{subsection.2.0.5}}
+\backcite {aguilar, gprime}{{13}{2.0.5}{subsection.2.0.5}}
+\backcite {aguilar}{{14}{2.0.5}{subsection.2.0.5}}
