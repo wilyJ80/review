@@ -31,6 +31,47 @@ Comunicação & Protocolo HTTP/JSON & Transporte de telemetria da borda ao servi
 \end{tabular}
 \end{table}
 
+\subsection{Justificativa das Escolhas Técnicas}
+% TODO: Detalhar aqui os critérios de seleção das ferramentas.
+% Sugestões de pontos a abordar:
+% - Por que o ESP32 em detrimento de outras opções (custo vs. performance vs. conectividade)?
+Foi selecionado o microcontrolador ESP32 em detrimento de outras opções para a camada de borda.
+
+Inicialmente, foram considerados os microcontroladores Arduino, em especial o modelo Arduino UNO, devido à representação expressiva da marca nos trabalhos encontrados, especialmente no que diz respeito aos trabalhos mais próximos à área de ensino de Física.
+
+No entanto, o fator de facilidade de integração influenciaram fortemente na escolha de ESP32 pelo autor. Placas do ecossistema Arduino de preços comparáveis não fornecem Wi-Fi integrada, componente crucial para a comunicação do microcontrolador com o servidor central Raspberry Pi. Devido à preferência inicial pelo ecossistema Arduino, foi analisada a possibilidade de integrar o Arduino UNO com módulos Wi-Fi separados que realizassem a comunicação Wi-Fi (em especial, o módulo ESP-01, bastante disponível no mercado e barato). No entanto, foi considerado que tal integração consumiria mais tempo de desenvolvimento comparado a simplesmente utilizar uma placa com Wi-Fi integrada, afinal, envolveria uma arquitetura com múltiplos microcontroladores por bancada, o que aumentaria a complexidade de orquestração.
+
+Outras opções foram consideradas, como o Raspberry Pi Pico. No entanto, o fator da falta de Wi-Fi integrada o tirou da escolha final pelo mesmo motivo.
+
+Foram consideradas placas no ecossistema Arduino com Wi-Fi integrada, como o Arduino Uno R4 WiFi. No entanto, o fator custo se mostrou expressivo na diferença de preço entre tal microcontrolador e o ESP32.
+
+Por fim, é sabido que as leituras analógicas do ESP32 não são da mesma qualidade de placas de preço similar, como o Arduino UNO. Isso é um fator que pode afetar a qualidade das leituras no experimento que é proposto (carga e descarga de capacitor). Pretende-se contornar essa possível limitação ao utilizar, por exemplo, um módulo ADC (conversor analógico-digital) separado, para auxiliar as leituras do ESP32. No entanto, é de fundamental importância destacar que o foco do trabalho não é na busca pelas melhores leituras e precisão experimental, e sim pela arquitetura amigável para fins pedagógicos. Tal fator precisão é algo desejável a se alcançar ao longo do trabalho, porém não sendo estritamente obrigatório.
+
+% - Razões para a escolha do framework Quart (Python) em comparação a outras opções de backend (Flask, Django, FastAPI).
+Na camada de servidor, foi escolhido o \textit{framework} web Quart, do ecossistema Python, para toda a camada web a ser desenvolvida e implantada no servidor Raspberry Pi.
+
+A escolha inicial foi o \textit{framework} Flask, devido à facilidade de desenvolvimento, prototipação e implantação graças a numerosas formas de lidar com a arquitetura ``MVC tradicional'' que envolve servir páginas HTML diretamente. O framework fornece facilidades no que diz respeito a redirecionamento de páginas HTML, injeção de variáveis em templates, e robustas formas de tratar formulários HTML.
+
+No entanto, houve a opção de uso do \textit{framework} Quart. Amplamente compatível em API com o \textit{framework} Flask, e desenvolvido pela mesma equipe, o mesmo fornece processamento assíncrono de solicitações HTTP. Tal requisito é fundamental, afinal, no presente trabalho pretende-se fornecer uma arquitetura que tenha expectativa de escalar para múltiplos nós microcontroladores ao permitir que solicitações simultâneas não bloqueiem o servidor web, mesmo que tal demonstração de funcionamento com múltiplos nós microcontroladores não seja realizada necessariamente no presente trabalho, afinal concorrência e protocolos não é o foco principal.
+
+O critério de preferência de utilizar uma arquitetura ``MVC tradicional'' motivou-se pela facilidade de desenolvimento e de implantação: desenvolver-se-á apenas uma camada web integrada, ao invés de módulos \textit{backend} e \textit{frontend} separados, simplificando a arquitetura a ser entregue de forma funcional e completa com apenas um serviço exposto ao usuário final.
+
+% - Justificativa do uso de protocolos leves (HTTP/JSON) para a orquestração.
+O protocolo leve de comunicação selecionado, o HTTP, foi escolhido por ser amplamente comum e utilizado na área de tecnologia, tanto para a comunicação entre os microcontroladores e o servidor, quanto para o servidor web a ser exposto para os usuários.
+
+Como é usual, o serviço web é exposto como um servidor HTTP.
+
+Foi considerado o uso do protocolo MQTT para envio de leituras do microcontrolador para o servidor. Tal protocolo é fortemente representado na área de IoT, devido a diversos fatores, como a possibilidade de \textit{payloads} mais leves. No entanto, foi considerado que trazer dois protocolos de comunicação, um para a comunicação entre a camada microcontrolada e de servidor, e outro para o servidor web, trazia complexidade de arquitetura. Logo, foi escolhido o protocolo HTTP como forma de comunicação principal entre os componentes.
+
+\subsection{Procedimentos Experimentais}
+% TODO: Descrever detalhadamente o passo a passo da execução.
+% Sugestões de pontos a abordar:
+% - Protocolo de montagem física da bancada (passo a passo da PoC).
+% - Metodologia de calibração dos sensores e preparação do ambiente.
+% - Fluxo de execução dos testes: setup, coleta, persistência e visualização.
+% - Estratégias adotadas para garantir a integridade dos dados durante a aquisição.
+\textit{[Espaço para descrever detalhadamente o percurso experimental, desde a preparação do ambiente até a coleta e validação dos dados, demonstrando o rigor científico na condução do experimento.]}
+
 \subsection{Arquitetura do Sistema e Diagramas}
 O projeto adota uma topologia de rede cliente-servidor, onde o nó sensor comunica-se com um coordenador central, permitindo a orquestração do laboratório.
 
