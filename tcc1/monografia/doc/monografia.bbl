@@ -5,16 +5,6 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v<VERSION> }
 
-\bibitem[Aguilar-Marín, Chavez-Bacilio e Jáuregui-Rosas 2018]{aguilar}
-\abntrefinfo{Aguilar-Marín, Chavez-Bacilio e Jáuregui-Rosas}{Aguilar-Marín;
-  Chavez-Bacilio; Jáuregui-Rosas}{2018}
-{AGUILAR-MARíN, P.; CHAVEZ-BACILIO, M.; JáUREGUI-ROSAS, S. Using analog
-  instruments in tracker video-based experiments to understand the phenomena of
-  electricity and magnetism in physics education.
-\textbf{European Journal of Physics}, IOP Publishing, v.~39, n.~3, p. 035204,
-  mar 2018.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1088/1361-6404/aaa8f8}.}
-
 \bibitem[Al. 2011]{quadrant}
 \abntrefinfo{Al.}{Al.}{2011}
 {AL., E. I.~E. A remote laboratory experiment for 4-quadrant control of a dc
@@ -26,14 +16,6 @@ Dispon{\'\i}vel em: \url{https://doi.org/10.1088/1361-6404/aaa8f8}.}
 {ALLAFI, I.; IQBAL, M.~T. Design and implementation of a low cost web server
   using esp32 for real-time photovoltaic system monitoring. In:  . [S.l.:
   s.n.], 2017. p.~1--5.}
-
-\bibitem[Aqra \textit{et al.} 2022]{thermoelectric}
-\abntrefinfo{Aqra \textit{et al.}}{Aqra \textit{et al.}}{2022}
-{AQRA, R. \textit{et al.} Thermoelectric effects and applications: an advanced
-  physics laboratory experiment.
-\textbf{European Journal of Physics}, IOP Publishing, v.~43, n.~5, p. 055101,
-  jun 2022.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1088/1361-6404/ac72d3}.}
 
 \bibitem[Caetano, Moreira e Oliveira 2022]{termometria}
 \abntrefinfo{Caetano, Moreira e Oliveira}{Caetano; Moreira; Oliveira}{2022}
@@ -77,21 +59,6 @@ Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1088/1361-6404/ad6cb4}.}
 ISSN 1361-6404.
 Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1088/1361-6404/ac18b6}.}
 
-\bibitem[Loianno \textit{et al.} 2021]{foam}
-\abntrefinfo{Loianno \textit{et al.}}{Loianno \textit{et al.}}{2021}
-{LOIANNO, V. \textit{et al.} A remote foaming experiment.
-\textbf{Education for Chemical Engineers}, v.~36, p. 171--175, 2021.
-ISSN 1749-7728.
-Dispon{\'\i}vel em:
-  \url{https://www.sciencedirect.com/science/article/pii/S1749772821000336}.}
-
-\bibitem[Lott \textit{et al.} 2009]{gprime}
-\abntrefinfo{Lott \textit{et al.}}{Lott \textit{et al.}}{2009}
-{LOTT, G.~K. \textit{et al.} Real-time development of data acquisition and
-  analysis software for hands-on physiology education in neuroscience: G-prime.
-  In:  \textbf{2009 Annual International Conference of the IEEE Engineering in
-  Medicine and Biology Society}. [S.l.: s.n.], 2009. p. 2019--2021.}
-
 \bibitem[Martins \textit{et al.} 2023]{lms}
 \abntrefinfo{Martins \textit{et al.}}{Martins \textit{et al.}}{2023}
 {MARTINS, M. \textit{et al.} Integration of remote laboratories with lms. In:
@@ -116,12 +83,6 @@ Dispon{\'\i}vel em: \url{https://doi.org/10.1088/0143-0807/35/5/055009}.}
 {RAVIOLA, L. \textit{et al.} The bead on a rotating hoop revisited: An
   unexpected resonance.
 \textbf{European Journal of Physics}, v.~38, p. 015005, 01 2017.}
-
-\bibitem[Reljic \textit{et al.} 2018]{spring}
-\abntrefinfo{Reljic \textit{et al.}}{Reljic \textit{et al.}}{2018}
-{RELJIC, V. \textit{et al.} Remotely controlled compressed air spring—design
-  and implementation for distance education.
-\textbf{Computer Applications in Engineering Education}, v.~26, 06 2018.}
 
 \bibitem[Shah \textit{et al.} 2021]{create}
 \abntrefinfo{Shah \textit{et al.}}{Shah \textit{et al.}}{2021}
