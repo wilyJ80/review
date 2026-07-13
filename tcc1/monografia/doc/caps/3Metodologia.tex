@@ -93,9 +93,13 @@ O projeto adota uma topologia de rede cliente-servidor, onde o nó sensor comuni
 \subsubsection{Diagrama de Arquitetura}
 A arquitetura é dividida em três camadas principais:
 
-\begin{center}
- \includegraphics[scale=.37]{arquitetura}
-\end{center}
+\begin{figure}
+	\caption{\label{arquitetura}Arquitetura Proposta}
+	\begin{center}
+		\includegraphics[scale=0.35]{arquitetura}
+	\end{center}
+\end{figure}
+
 
 \begin{enumerate}
 	\item Camada de Borda (Edge): Composta pela bancada experimental, onde localiza-se um ESP32 responsável pela leitura física do fenômeno.
@@ -106,9 +110,12 @@ A arquitetura é dividida em três camadas principais:
 \subsubsection{Montagem Elétrica da Prova de Conceito (Circuito RC)}
 A demonstração funcional será baseada no experimento de carga e descarga de um capacitor, seguindo a montagem padrão da literatura.
 
-\begin{center}
- \includegraphics[scale=.37]{graphviz}
-\end{center}
+\begin{figure}
+	\caption{\label{graphviz}Diagrama de montagem elétrica}
+	\begin{center}
+		\includegraphics[scale=0.4]{graphviz}
+	\end{center}
+\end{figure}
 
 \begin{enumerate}
 	\item Circuito Físico: A fonte de alimentação conectada a um resistor (R) e um capacitor (C) em série, controlada por uma chave.
