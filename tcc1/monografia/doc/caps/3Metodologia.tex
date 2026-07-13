@@ -70,7 +70,14 @@ Foi considerado o uso do protocolo MQTT para envio de leituras do microcontrolad
 % TODO: Descrever detalhadamente o passo a passo da execução.
 % Sugestões de pontos a abordar:
 % - Protocolo de montagem física da bancada (passo a passo da PoC).
-O módulo a ser desenvolvido na prova de conceito como bancada experimental envolverá a integração completa dos módulos que fazem parte do experimento de carga e descarga de capacitor em circuito funcional. As leituras devem ser feitas corretas pelo microcontrolador utilizando entrada analógica. Toda a montagem será feita em um \textit{protoboard}, uma placa de prototipação onde as montagens e conexões serão feitas.
+O módulo a ser desenvolvido na prova de conceito como bancada experimental envolverá a integração completa dos módulos que fazem parte do experimento de carga e descarga de capacitor em circuito funcional. As leituras devem ser feitas corretas pelo microcontrolador utilizando entrada analógica. Toda a montagem será feita em um \textit{protoboard}, uma placa de prototipação onde as montagens e conexões serão feitas. O \textit{protoboard} é uma base de plático com conectores metálicos internos que unem furos, servindo para montagem de circuitos eletrônicos temporários sem a necessidade de soldagem.
+
+\begin{figure}[H]
+	\caption{\label{breadboard}Protoboard}
+	\begin{center}
+		\includegraphics[scale=0.2]{breadboard}
+	\end{center}
+\end{figure}
 
 % - Metodologia de calibração dos sensores e preparação do ambiente.
 O código a ser gravado na memória \textit{flash} da placa ESP32, escrito em \textit{Arduino Framework,} irá orquestrar a escolha dos pinos a serem utilizados da placa, os comandos de leituras e o intervalo entre as leituras, além de realizar as solicitações HTTP para o envio das coletas para o servidor Raspberry Pi. Um código identificador será disposto em um \textit{display} na montagem, o que permitirá que o usuário identifique as leituras realizadas posteriormente na aplicação \textit{web}.
@@ -95,7 +102,7 @@ O projeto adota uma topologia de rede cliente-servidor, onde o nó sensor comuni
 \subsubsection{Diagrama de Arquitetura}
 A arquitetura é dividida em três camadas principais:
 
-\begin{figure}
+\begin{figure}[H]
 	\caption{\label{arquitetura}Arquitetura Proposta}
 	\begin{center}
 		\includegraphics[scale=0.35]{arquitetura}
@@ -112,7 +119,7 @@ A arquitetura é dividida em três camadas principais:
 \subsubsection{Montagem Elétrica da Prova de Conceito (Circuito RC)}
 A demonstração funcional será baseada no experimento de carga e descarga de um capacitor, seguindo a montagem padrão da literatura.
 
-\begin{figure}
+\begin{figure}[H]
 	\caption{\label{graphviz}Diagrama de montagem elétrica}
 	\begin{center}
 		\includegraphics[scale=0.4]{graphviz}
