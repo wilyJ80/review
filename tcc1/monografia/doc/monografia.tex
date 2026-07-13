@@ -42,7 +42,7 @@
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	openany,			% capítulos começam em qualquer página
 	oneside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
@@ -323,7 +323,7 @@
 \imprimirfolhaderosto
 
 \input{nao_editar/anu_orientador}
-\cleardoublepage
+\clearpage
 %\input{pre/__errata} %se houver, descomente essa linha
 % \input{editar/aprovacao}
 
@@ -343,10 +343,10 @@
 
 \input{./nao_editar/resumos}
 %\iffiguras
-%\pdfbookmark[0]{\listfigurename}{lof} \listoffigures* \cleardoublepage
+%\pdfbookmark[0]{\listfigurename}{lof} \listoffigures*
 %\fi
 \iftabelas
-\pdfbookmark[0]{\listtablename}{lot} \listoftables* \cleardoublepage
+\pdfbookmark[0]{\listtablename}{lot} \listoftables*
 \fi
 
 % ---
@@ -355,21 +355,18 @@
 %\ifquadros
 %\pdfbookmark[0]{\listofquadrosname}{loq}
 %\listofquadros*
-%\cleardoublepage
 %\fi
 % ---
 
 % ---
 % inserir lista de siglas
 % ---
-%\ifsiglas
-%  \input{editar/siglas}
-%  \vspace*{\fill} % Ajusta o espaçamento vertical
-%  \centering % Centraliza o título
-%  \vspace*{\fill} % Ajusta o espaçamento vertical
-%  \printglossary[type=\acronymtype, title={LISTA DE ABREVIATURAS E SIGLAS}]
-%  \cleardoublepage
-%\fi
+\ifsiglas
+  \input{editar/siglas}
+  \glsaddall
+  \printglossary[type=\acronymtype, title={LISTA DE ABREVIATURAS E SIGLAS}, nonumberlist]
+  \clearpage
+\fi
 
 
 %Símbolos
@@ -377,11 +374,12 @@
 \begin{simbolos} 
 \input{editar/simbolos} 
 \end{simbolos}
+\clearpage
 \fi
 
 \pdfbookmark[0]{\contentsname}{toc} 
 \tableofcontents*
-\cleardoublepage
+\clearpage
 \cftinserthook{toc}{POST}
 
 

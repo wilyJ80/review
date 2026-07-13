@@ -4,6 +4,8 @@
 
 # Compile doc
 pdflatex monografia.tex
+# Process glossaries/acronyms
+makeglossaries monografia
 # Process references
 bibtex monografia
 # Place citations
