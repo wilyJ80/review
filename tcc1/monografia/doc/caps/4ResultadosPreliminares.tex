@@ -2,9 +2,12 @@
 Nesta seção, são apresentados os resultados alcançados até o momento na fase de desenvolvimento da Prova de Conceito (PoC). Estes resultados avaliam o progresso do desenvolvimento da arquitetura proposta, demonstrando conformidade com o cronograma.
 
 \section{Montagem do Experimento e Firmware}
+Até o presente momento, foi completada a integração do experimento físico com as leituras, de forma orquestrada pelo \textit{firmware} desenvolvido em código Arduino para o ESP32. As leituras de capacitância são demonstradas no console do computador. Até então, a execução é feita limitando-se ao módulo do microcontrolador, sem passar dados por servidor central via HTTP, o que fica a ser desenvolvido.
+
+A montagem mostrou-se intuitiva de reproduzir, o que traz boas expectativas a respeito do foco na orquestração da instrumentação trazido pelo trabalho, ao invés de um foco em montagens complexas de \textit{hardware.}
 
 \begin{figure}[H]
 	\centering
-	\caption{\label{logs}Logs das leituras do experimento}
-	\includegraphics[scale=0.4]{logs}
+	\caption{\label{logs}Logs das leituras do experimento no computador}
+	\includegraphics[scale=0.7]{logs}
 \end{figure}
