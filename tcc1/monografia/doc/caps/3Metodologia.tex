@@ -73,7 +73,9 @@ Foi considerado o uso do protocolo MQTT para envio de leituras do microcontrolad
 O módulo a ser desenvolvido na prova de conceito como bancada experimental envolverá a integração completa dos módulos que fazem parte do experimento de carga e descarga de capacitor em circuito funcional. As leituras devem ser feitas corretas pelo microcontrolador utilizando entrada analógica. Toda a montagem será feita em um \textit{protoboard}, uma placa de prototipação onde as montagens e conexões serão feitas.
 
 % - Metodologia de calibração dos sensores e preparação do ambiente.
-O código a ser gravado na memória \textit{flash} da placa ESP32, escrito em Arduino Framework, irá orquestrar a escolha dos pinos a serem utilizados da placa, os comandos de leituras e o intervalo entre as leituras, além de realizar as solicitações HTTP para o envio das coletas para o servidor Raspberry Pi. Um código identificador será disposto em um \textit{display} na montagem, o que permitirá que o usuário identifique as leituras realizadas posteriormente na aplicação \textit{web}.
+O código a ser gravado na memória \textit{flash} da placa ESP32, escrito em \textit{Arduino Framework,} irá orquestrar a escolha dos pinos a serem utilizados da placa, os comandos de leituras e o intervalo entre as leituras, além de realizar as solicitações HTTP para o envio das coletas para o servidor Raspberry Pi. Um código identificador será disposto em um \textit{display} na montagem, o que permitirá que o usuário identifique as leituras realizadas posteriormente na aplicação \textit{web}.
+
+O código será desenvolvido no editor Neovim, sendo a compilação e upload feita a partir da ferramenta Arduino CLI, tendo total compatibilidade com a ferramenta Arduino IDE, ambiente oficialmente recomendado no ecossistema Arduino para desenvolvimento.
 
 % - Fluxo de execução dos testes: setup, coleta, persistência e visualização.
 Ao final das coletas realizadas, o usuário, como um aluno ou professor, poderão acessar o \textit{link} da aplicação em execução no servidor, onde as coletas poderão ser visualizadas e baixadas.
