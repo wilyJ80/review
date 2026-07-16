@@ -1,8 +1,8 @@
 \chapter{Resultados Preliminares}
 Nesta seção, são apresentados os resultados alcançados até o momento na fase de desenvolvimento da Prova de Conceito (PoC). Estes resultados avaliam o progresso do desenvolvimento da arquitetura proposta, demonstrando conformidade com o cronograma.
 
-\section{Montagem do Experimento e Firmware}
-Até o presente momento, foi completada a integração do experimento físico com as leituras, de forma orquestrada pelo \textit{firmware} desenvolvido em código Arduino para o ESP32. As leituras de capacitância são demonstradas no console do computador. Até então, a execução é feita limitando-se ao módulo do microcontrolador, sem passar dados por servidor central via HTTP, o que fica a ser desenvolvido.
+\section{Montagem do Hardware e Desenvolvimento do Firmware}
+Até o presente momento, foi completada a integração da montagem do circuito RC com leituras de capacitância, de forma orquestrada pelo \textit{firmware} desenvolvido em código Arduino para o ESP32, a fim de verificar o funcionamento correto da montagem. As leituras de capacitância são demonstradas no console do computador. Até então, a execução é feita limitando-se ao módulo do microcontrolador, sem passar dados por servidor central via HTTP, o que fica a ser desenvolvido.
 
 A montagem mostrou-se intuitiva de reproduzir, o que traz boas expectativas a respeito do foco na orquestração da instrumentação trazido pelo trabalho, ao invés de um foco em montagens complexas de \textit{hardware.}
 
@@ -12,7 +12,7 @@ A montagem mostrou-se intuitiva de reproduzir, o que traz boas expectativas a re
 	\includegraphics[scale=0.25]{montagem}
 \end{figure}
 
-O código até então foi feito para avaliar o funcionamento do experimento, e não aborda no momento as comunicações sem fio.
+O código até então foi feito para avaliar o funcionamento da montagem do experimento, e não aborda no momento as comunicações sem fio. Além disso, o experimento de carga e descarga de capacitor em si exige o registro de leituras de tensão ao longo do tempo, o que ainda será desenvolvido.
 
 \begin{figure}[H]
 	\centering
