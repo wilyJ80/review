@@ -43,15 +43,13 @@ No entanto, o fator de facilidade de integração influenciaram fortemente na es
 
 Foram consideradas placas no ecossistema Arduino com Wi-Fi integrada, como o Arduino Uno R4 WiFi. No entanto, o fator custo se mostrou expressivo na diferença de preço entre tal microcontrolador e o ESP32.
 
-Por fim, é sabido que as leituras analógicas do ESP32 não são da mesma qualidade de placas de preço similar, como o Arduino UNO. Isso é um fator que pode afetar a qualidade das leituras no experimento que é proposto (carga e descarga de capacitor). Pretende-se contornar essa possível limitação ao utilizar, por exemplo, um módulo ADC (conversor analógico-digital) separado, para auxiliar as leituras do ESP32. No entanto, é de fundamental importância destacar que o foco do trabalho não é na busca pelas melhores leituras e precisão experimental, e sim pela arquitetura amigável para fins pedagógicos. Tal fator precisão é algo desejável a se alcançar ao longo do trabalho, porém não sendo estritamente obrigatório.
-
 % - Razões para a escolha do framework Quart (Python) em comparação a outras opções de backend (Flask, Django, FastAPI).
 
 O serviço web a ser exposto, na camada de servidor, consiste num projeto no qual as dependências externas (como o \textit{framework} web Quart a ser utilizado) serão instaladas utilizando o gerenciador de pacotes \textit{uv.} Essa escolha foi feita porque o mesmo é um dos maiores gerenciadores de pacote atualmente no ecossistema Python que fornece suporte a arquivos \textit{lockfiles.} Esses arquivos permitem a fixação de tanto as dependências diretas (como as bibliotecas utilizadas) quanto as dependências transitivas (as dependências das dependências). Com isso, objetiva-se que a longevidade ao longo dos anos do código a ser desenvolvido seja a máxima possível, ao facilitar a reproducibilidade do projeto.
 
 Ainda na camada de servidor, foi escolhido o \textit{framework} web Quart, do ecossistema Python, para toda a camada web a ser desenvolvida e implantada no servidor Raspberry Pi.
 
-A escolha inicial foi o \textit{framework} Flask, devido à facilidade de desenvolvimento, prototipação e implantação graças a numerosas formas de lidar com a arquitetura ``MVC tradicional'' que envolve servir páginas HTML diretamente. O framework fornece facilidades no que diz respeito a redirecionamento de páginas HTML, injeção de variáveis em templates, e robustas formas de tratar formulários HTML.
+A escolha inicial foi o \textit{framework} Flask, devido à facilidade de desenvolvimento, prototipação e implantação graças a numerosas formas de lidar com a arquitetura ``MVC tradicional'' que envolve servir páginas HTML diretamente. O framework fornece facilidades no que diz respeito a redirecionamento de páginas HTML e injeção de variáveis em templates, por exemplo.
 
 No entanto, houve a opção de uso do \textit{framework} Quart. Amplamente compatível em API com o \textit{framework} Flask, e desenvolvido pela mesma equipe, o mesmo fornece processamento assíncrono de solicitações HTTP. Tal requisito é fundamental, afinal, no presente trabalho pretende-se fornecer uma arquitetura que tenha expectativa de escalar para múltiplos nós microcontroladores ao permitir que solicitações simultâneas não bloqueiem o servidor web, mesmo que tal demonstração de funcionamento com múltiplos nós microcontroladores não seja realizada necessariamente no presente trabalho, afinal concorrência e protocolos não é o foco principal.
 
@@ -85,13 +83,7 @@ O código a ser gravado na memória \textit{flash} da placa ESP32, escrito em \t
 O código será desenvolvido no editor Neovim, sendo a compilação e upload feita a partir da ferramenta Arduino CLI, tendo total compatibilidade com a ferramenta Arduino IDE, ambiente oficialmente recomendado no ecossistema Arduino para desenvolvimento.
 
 % - Fluxo de execução dos testes: setup, coleta, persistência e visualização.
-Ao final das coletas realizadas, o usuário, como um aluno ou professor, poderão acessar o \textit{link} da aplicação em execução no servidor, onde as coletas poderão ser visualizadas e baixadas.
-
-O servidor é acessado por um \textit{link} proveniente de um domínio próprio do autor adquirido pelo Registro.br. O custo de infraestrutura adicional é mínimo, dado que será utilizado o serviço externo gratuito \textit{Cloudflare Tunnel} para fazer a ligação entre o servidor web em execução no Raspberry Pi com o domínio a ser acessado. As leituras dos microcontroladores são enviadas, também, para o mesmo \textit{site}.
-
-A opção de utilizar um serviço externo ao invés de se conectar diretamente ao IP do servidor Raspberry Pi se dá devido ao fato de que é sabido que os IPs em redes usuais pode mudar eventualmente, o que pode causar interrupção do serviço a partir do momento que tal fato aconteça. Mecanismos de descoberta de IP em rede interna poderiam ser desenvolvidos como alternativas, utilizando soluções existentes como o protocolo mDNS. No entanto, a necessidade de código de microcontrolador adicional para orquestrar essa comunicação do lado do ESP32 tornou essa opção menos convidativa. Além disso, os dispositivos dos alunos e professores teriam que se conectar obrigatoriamente à mesma rede do Raspberry Pi para possibilitar a coleta de resultados. A possibilidade de centralizar essa complexidade em simples configuração de servidor se mostrou mais confortável para a situação.
-
-A exposição do domínio e conexão com o servidor web no Raspberry Pi se dá, em primeiro lugar, à conexão do domínio no \textit{dashboard} da Cloudflare. O programa \textit{cloudflared} é instalado como serviço no Raspberry Pi, o que permitirá a conexão direta do servidor web rodando no Raspberry Pi com o domínio a partir de nome de \textit{host} e porta. Isso permitirá o acesso de alunos e professores à interface web a partir de um \textit{link}, sem a necessidade de se conectarem a uma rede específica para o acesso, dado que o serviço web estará exposto à \textit{internet.}
+Ao final das coletas realizadas, o usuário poderá acessar a interface da aplicação em execução no servidor, onde as coletas poderão ser visualizadas e baixadas.
 
 % - Estratégias adotadas para garantir a integridade dos dados durante a aquisição.
 % - Não se aplica
@@ -113,7 +105,7 @@ A arquitetura é dividida em três camadas principais:
 \begin{enumerate}
 	\item Camada de Borda (Edge): Composta pela bancada experimental, onde localiza-se um ESP32 responsável pela leitura física do fenômeno.
 	\item Camada de Servidor (Gateway): O Raspberry Pi recebe as mensagens de telemetria, realiza a persistência no banco de dados e gerencia o tráfego da rede local.
-	\item Camada de Aplicação: O Dashboard Web, acessado via navegador por docentes ou alunos, que consome os dados persistidos para exibição gráfica em tempo real.
+	\item Camada de Aplicação: interface com usuário.
 \end{enumerate}
 
 \subsubsection{Montagem Elétrica da Prova de Conceito (Circuito RC)}

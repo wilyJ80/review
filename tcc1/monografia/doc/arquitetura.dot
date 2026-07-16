@@ -1,0 +1,46 @@
+digraph Arquitetura {
+    graph [
+        rankdir=LR,
+        splines=false,
+        nodesep=0.6,
+        ranksep=1.0,
+        fontname="Helvetica"
+    ];
+
+    node [shape=box, style="filled", fontname="Helvetica"];
+    edge [fontname="Helvetica", arrowsize=0.8];
+
+    // Bancadas de Experimento
+    subgraph cluster_bancadas {
+        label="Bancada de Experimento";
+        style="dashed";
+        color="black";
+
+        sensor1 [label="Nó Sensor \n(ESP32)", fillcolor="#FFF8CC"];
+    }
+
+    // Servidor Central
+    servidor [
+        label="Servidor Central\n(Raspberry Pi)",
+        fillcolor="#99EE99"
+    ];
+
+    // Banco de Dados
+    banco [
+        shape=cylinder,
+        label="Banco de Dados",
+        fillcolor="#D9D9D9"
+    ];
+
+    // Aplicação Web
+    web [
+        label="Interface com o Usuário",
+        fillcolor="#99EE99"
+    ];
+
+    // Conexões
+    sensor1 -> servidor [label="Wi-Fi (HTTP)"];
+
+    servidor -> banco;
+    servidor -> web;
+}
