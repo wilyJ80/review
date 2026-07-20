@@ -9,6 +9,7 @@ theme: "Pittsburgh"
 navigation: "empty"
 colortheme: "crane"
 fonttheme: "structuresmallcapsserif"
+lang: "pt-br"
 ---
 
 # Problema de Pesquisa
