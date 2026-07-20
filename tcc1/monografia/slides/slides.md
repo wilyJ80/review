@@ -55,13 +55,13 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 ::: {.column width="50%"}
 **A Prática e o Ensino**
 
-* A experimentação ativa é o elo necessário entre a teoria abstrata matemática e a formação científica. Conforme a literatura, alunos assimilam melhor o conhecimento quando expostos aos ruídos intrínsecos de experimentos reais, divergindo da idealização pura observada em simuladores virtuais padronizados.
+* A experimentação ativa é o elo necessário entre a teoria abstrata matemática e a formação científica. Conforme a literatura, alunos assimilam melhor o conhecimento quando expostos aos ruídos intrínsecos de experimentos reais, divergindo da idealização pura observada em simuladores virtuais padronizados (CHEN, 2026).
 :::
 
 ::: {.column width="50%"}
 **Embarcados e Orquestração**
 
-* Microcontroladores modernos atuam como nós de borda robustos. Ao integrar processamento com comunicação em rede, o hardware é capaz de adquirir os sinais de baixo nível, formatá-los, e delegar toda a persistência de longo prazo e renderização visual para um servidor centralizado e escalável.
+* Microcontroladores modernos atuam como nós de borda robustos. Ao integrar processamento com comunicação em rede, o hardware é capaz de adquirir os sinais de baixo nível, formatá-los, e delegar toda a persistência de longo prazo e renderização visual para um servidor centralizado e escalável (MARTINS, 2023).
 :::
 ::::::::::::::
 
@@ -98,7 +98,7 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 ::: {.column width="50%"}
 
 
-A análise do circuito RC expõe o estudante ao comportamento da transição energética. A orquestração digital desses dados via telemetria educacional será utilizada para demonstrar a viabilidade técnica da arquitetura, permitindo o confronto do modelo ideal com medições físicas.
+A análise do circuito RC pode expôr o estudante ao comportamento da transição energética, trazendo a possibilidade de comparação entre o modelo ideal e a realidade (KOWALSKI, 2024). A orquestração digital desses dados via telemetria educacional será utilizada para demonstrar a viabilidade técnica da arquitetura, permitindo o confronto do modelo ideal com medições físicas.
 :::
 
 ::: {.column width="50%"}

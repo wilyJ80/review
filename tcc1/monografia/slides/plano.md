@@ -14,7 +14,7 @@
 
 - Encontro Ibérico para o Ensino de Física
 
-- Revisão Sistemática: solucao proposta ainda nao e tao difundida assim. Leituras manuais e utilizando equipamentos caros ainda são comuns.
+- ~Revisão Sistemática: solucao proposta ainda nao e tao difundida assim. Leituras manuais e utilizando equipamentos caros ainda são comuns~ : NAO ESTA MENCIONADO NA MONOGRAFIA BEM
 
 # EMBASADO ?
 
