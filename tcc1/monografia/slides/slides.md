@@ -61,7 +61,7 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 ::: {.column width="50%"}
 **Embarcados e Orquestração**
 
-* Microcontroladores modernos atuam como nós de borda robustos. Ao integrar processamento com comunicação em rede (IoT), o hardware é capaz de adquirir os sinais de baixo nível, formatá-los, e delegar toda a persistência de longo prazo e renderização visual para um servidor centralizado e escalável.
+* Microcontroladores modernos atuam como nós de borda robustos. Ao integrar processamento com comunicação em rede, o hardware é capaz de adquirir os sinais de baixo nível, formatá-los, e delegar toda a persistência de longo prazo e renderização visual para um servidor centralizado e escalável.
 :::
 ::::::::::::::
 
@@ -70,7 +70,7 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 - **Aquisição de Dados:** Utilização do ESP32 operando sobre o framework Arduino (C/C++) para leitura analógica da bancada.
 - **Comunicação Leve:** Disparo de pacotes com resultados consolidados em formato JSON por meio do protocolo HTTP.
 - **Servidor Desacoplado:** Abstrai o armazenamento das medições e serviço de telemetria.
-- **Interface Comum:** Os alunos acessam as plotagens a partir de qualquer dispositivo conectado à rede.
+- **Interface Comum:** Os usuários acessam os resultados a partir de qualquer dispositivo conectado à rede.
 
 # Arquitetura Proposta
 
