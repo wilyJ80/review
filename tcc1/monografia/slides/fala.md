@@ -16,6 +16,10 @@
 
 - Conversão do tempo em microfarads
 
+# Prova de Conceito
+
+- Os valores de resistencia e do capacitor devem ser compativeis com a taxa de amostragem maxima do ESP32, assim como a corrente maxima suportada por ele.
+
 # Perguntas da Banca
 
 - Escopo:
