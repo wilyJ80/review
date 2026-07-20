@@ -30,7 +30,7 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 :::
 
 ::: {.column width="50%"}
-![Laboratório](./lab.jpg)
+![Laboratório](./img/lab.jpg)
 
 :::
 ::::::::::::::
@@ -74,20 +74,20 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 
 # Arquitetura Proposta
 
-![Arquitetura](./arquitetura.png)
+![Arquitetura](./img/arquitetura.png)
 
 # Justificativas Técnicas
 
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![Arduino](./arduino.jpeg)
+![Arduino](./img/arduino.jpeg)
 
 :::
 
 ::: {.column width="50%"}
 
-![ESP32](./esp.jpg)
+![ESP32](./img/esp.jpg)
 
 :::
 ::::::::::::::
@@ -102,7 +102,7 @@ A análise do circuito RC expõe o estudante ao comportamento da transição ene
 :::
 
 ::: {.column width="50%"}
-![Circuito](./rc.jpg)
+![Circuito](./img/rc.jpg)
 
 :::
 ::::::::::::::
@@ -127,26 +127,11 @@ $$v_c(t) = V_0 e^{-\frac{t}{\tau}}$$
 ::: {.column width="50%"}
 
 
-![Protoboard](./breadboard.jpg)
+![Protoboard](./img/breadboard.jpg)
 :::
 
 ::: {.column width="50%"}
-![ESP32](./esp32.jpg)
-
-:::
-::::::::::::::
-
-# Prova de Conceito (RC)
-
-:::::::::::::: {.columns}
-::: {.column width="50%"}
-
-
-![Resistor](./resistor.jpg)
-:::
-
-::: {.column width="50%"}
-![Capacitor](./cap.png)
+![ESP32](./img/esp32.jpg)
 
 :::
 ::::::::::::::
@@ -157,18 +142,41 @@ $$v_c(t) = V_0 e^{-\frac{t}{\tau}}$$
 ::: {.column width="50%"}
 
 
-![Fios Jumper](./jumper.png)
+![Resistor](./img/resistor.jpg)
 :::
 
 ::: {.column width="50%"}
-![Display](./oled.png)
+![Capacitor](./img/cap.png)
+
+:::
+::::::::::::::
+
+# Prova de Conceito (RC)
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+
+![Fios Jumper](./img/jumper.png)
+:::
+
+::: {.column width="50%"}
+![Display](./img/oled.png)
 
 :::
 ::::::::::::::
 
 # Resultados Preliminares
 
-![Montagem](./montagem.jpeg)
+![Montagem](./img/montagem.jpeg)
+
+# Resultados Preliminares
+
+![Logs](./img/hajnaltest.png)
+
+# Resultados Preliminares
+
+![Logs](./img/logs.png)
 
 # Cronograma
 
