@@ -24,9 +24,9 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 
 - A ausência de uma rede integrada de dados dificulta a gestão centralizada.
 
-- O professor enfrenta dificuldades para monitorar múltiplos grupos simultaneamente, gerando sobrecarga pedagógica.
+- O professor enfrenta dificuldades para monitorar múltiplos grupos simultaneamente.
 
-- Há uma lacuna entre o aparato de aquisição de sinais (hardware) e o ambiente de processamento de informações do aluno.
+- Há uma lacuna entre o aparato de aquisição de sinais e o ambiente de processamento de informações.
 :::
 
 ::: {.column width="50%"}
@@ -76,6 +76,22 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 
 ![Arquitetura](./arquitetura.png)
 
+# Justificativas Técnicas
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+![Arduino](./arduino.jpeg)
+
+:::
+
+::: {.column width="50%"}
+
+![ESP32](./esp.jpg)
+
+:::
+::::::::::::::
+
 # Prova de Conceito (RC)
 
 :::::::::::::: {.columns}
@@ -105,7 +121,54 @@ $$v_c(t) = V_s \left( 1 - e^{-\frac{t}{\tau}} \right)$$
 
 $$v_c(t) = V_0 e^{-\frac{t}{\tau}}$$
 
+# Prova de Conceito (RC)
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+
+![Protoboard](./breadboard.jpg)
+:::
+
+::: {.column width="50%"}
+![ESP32](./esp32.jpg)
+
+:::
+::::::::::::::
+
+# Prova de Conceito (RC)
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+
+![Resistor](./resistor.jpg)
+:::
+
+::: {.column width="50%"}
+![Capacitor](./cap.png)
+
+:::
+::::::::::::::
+
+# Prova de Conceito (RC)
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+
+![Fios Jumper](./jumper.png)
+:::
+
+::: {.column width="50%"}
+![Display](./oled.png)
+
+:::
+::::::::::::::
+
 # Resultados Preliminares
+
+![Montagem](./montagem.jpeg)
 
 # Cronograma
 

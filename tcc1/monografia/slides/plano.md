@@ -1,6 +1,12 @@
+# A FAZER
+
+- Revisar leitura artigos passados pelo orientador.
+
 # KRIs
 
 - Ver possíveis perguntas que podem ser feitas pela banca.
+
+    - A maioria pode envolver questões de escopo. Avaliar pergunta com antecedência, e usar carta na manga "Trabalhos Futuros" conforme necessário.
 
 # RELEVANTE ?
 
@@ -24,7 +30,7 @@
 
 - Resultados Preliminares
 
-- Fotos dos componentes
+- Fotos de cada componente
 
 - Detalhamento de Resultados Preliminares: fórmula da capacitância, etc...
 
