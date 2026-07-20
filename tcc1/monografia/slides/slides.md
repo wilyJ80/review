@@ -76,6 +76,10 @@ A fragmentação da infraestrutura tecnológica e o isolamento dos dados em labo
 
 ![Arquitetura](./img/arquitetura.png)
 
+# Arquitetura Proposta
+
+![Caetano et al, 2022](./img/human.jpg)
+
 # Justificativas Técnicas
 
 :::::::::::::: {.columns}
